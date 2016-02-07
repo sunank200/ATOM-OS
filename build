@@ -1,0 +1,55 @@
+#!/bin/bash
+clear
+echo Configuring and installing the bochs software ...
+echo Press Enter to continue...
+read x
+
+cd bochs/bochs-2.3
+./configure --enable-smp --enable-apic --enable-ne2000 --enable-show-ips --enable-fpu --enable-cdrom 
+make all
+make install
+# Just wait
+echo Press Enter to continue...
+read x
+
+clear
+echo Configuring and installing the nasm assembler software ...
+echo Press Enter to continue...
+read x
+cd ../../nasm
+./configure
+make
+make install
+# Just wait
+echo Press Enter to continue...
+read x
+
+	
+clear
+echo Building the kernel, library, samples and preparing a 
+echo bootable floppy image and moving that to the bochsimg folder ...
+echo Press Enter to continue...
+read x
+cd ../base
+make all
+
+# cp fimage.orig fimage
+# ./cpfile IMAGE IMAGE
+# ./cpfile shell shell
+# ./cpfile ../samples/quiksort quiksort
+# ./cpfile ../samples/reduct reduct
+# ./cpfile ../samples/matmult matmult
+# ./cpfile ../samples/seive seive
+# ./cpfile ../samples/seive2 seive2
+# ./cpfile ../samples/merge smerg
+# ./cpfile ../samples/tsp tsp
+# ./cpfile ../samples/tsp2 tsp2
+
+# mv fimage ../bochsimg
+
+echo "If every thing is ok then fimage (floppy bootable image) is copied into"
+echo "bochsimg folder. Use the following commands to start the emulator"
+echo -e "\n\t\tcd bochsimg"
+echo -e "\t\tbochs -qf bochsrc.txt &"
+echo -e "\n\n\tThanks! Experiment and enjoy ...\n"
+

@@ -1,0 +1,38 @@
+Wellcome to Atom OS!
+
+Actual OS is very small one which runs under bochs emulator.
+Bochs (PC System Emulator), Nasm (Assembler) and MSDOS Hard 
+Disk Image, Floppy disk image with the Atom OS are occupying 
+the most of the space. Atom OS alone occupies only < 1 MB.
+Such a small OS. 
+
+Directories:-
+
+base	: Main kernel files of Atom OS
+bochs	: Bochs PC Emulator software
+bochsimg: Bochs emulator hard disk, floppy disk images ...
+bootldr	: 512 byte, floppy disk boot loader program
+imgcopy	: Utility program to copy files to/from 
+	  floppy disk image
+include	: Include files for asm and C programs.
+lib	: Common library routines
+nasm	: Netwide Assembler 
+sample	: Some sample programs to run under atom OS
+
+Steps to run:
+From the pack diretory execute build script
+# ./build
+
+As bochs boots Atom OS, to switch from one screen to another 
+use Alt-A, to display debug information use Ctrl-A.
+Every program gets executed on a different screen.
+Few sample set of Unix commands are provided as internal
+commands of the shell. In order to execute external programs
+at the shell prompt use exec command.
+
+$ exec <extern program name> <args>
+
+In order to boot MSDOS change the boot sequence in bochsimg/bochssrc.txt file. Hard disk is containing the MSDOS OS.
+
+Experiment and enjoy!!
+

@@ -1,0 +1,8 @@
+cc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32   -c -o seive2.o seive2.c
+In file included from ../include/syscalls.h:18,
+                 from seive2.c:6:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+seive2.c: In function ‘strike_factors’:
+seive2.c:31: warning: incompatible implicit declaration of built-in function ‘malloc’
+ld -T userproc.lds -Map seive2.map -o seive2 seive2.o ../lib/lib.a

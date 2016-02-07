@@ -1,0 +1,2350 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                0x0000000000000000        0x0
+                0x0000000000000000        0x0 fat12.o
+                0x0000000000000000        0x0 fdc.o
+                0x0000000000000000        0x0 fs.o
+                0x0000000000000000        0x0 kbd.o
+                0x0000000000000000        0x0 lock.o
+                0x0000000000000000        0x0 main.o
+                0x0000000000000000        0x0 nic.o
+                0x0000000000000000        0x0 process.o
+                0x0000000000000000        0x0 procintr.o
+                0x0000000000000000        0x0 pthread.o
+                0x0000000000000000        0x0 semaphore.o
+                0x0000000000000000        0x0 socket.o
+                0x0000000000000000        0x0 string.o
+                0x0000000000000000        0x0 syscalls.o
+                0x0000000000000000        0x0 timer.o
+                0x0000000000000000        0x0 vdisplay.o
+                0x0000000000000000        0x0 vmmap.o
+                0x0000000000010800                . = 0x10800
+                0x0000000000010800                _main
+                0x00000000000108d0                ignore_int
+                0x0000000000010900                divide_error
+                0x0000000000010930                coprocessor_error
+                0x0000000000010960                simd_coprocessor_error
+                0x0000000000010990                device_not_available
+                0x00000000000109a0                debug
+                0x00000000000109d0                nmi
+                0x0000000000010a00                inter3
+                0x0000000000010a30                overflow
+                0x0000000000010a60                bounds
+                0x0000000000010a90                invalid_op
+                0x0000000000010ac0                coprocessor_segment_overrun
+                0x0000000000010af0                double_fault
+                0x0000000000010b20                invalid_TSS
+                0x0000000000010b50                segment_not_present
+                0x0000000000010b80                stack_segment
+                0x0000000000010bb0                general_protection
+                0x0000000000010be0                alignment_check
+                0x0000000000010c10                page_fault
+                0x0000000000010c40                machine_check
+                0x0000000000010c70                spurious_interrupt_bug
+                0x0000000000010ca0                sys_call_entry
+                0x0000000000010cdf                sys_call_exit
+                0x0000000000010d00                irq_entry_0_0
+                0x0000000000010d30                irq_entry_0_1
+                0x0000000000010d50                irq_entry_0_2
+                0x0000000000010d70                irq_entry_0_3
+                0x0000000000010d90                irq_entry_0_4
+                0x0000000000010db0                irq_entry_0_5
+                0x0000000000010dd0                irq_entry_0_6
+                0x0000000000010df0                irq_entry_0_7
+                0x0000000000010e10                irq_entry_1_0
+                0x0000000000010e30                irq_entry_1_1
+                0x0000000000010e50                irq_entry_1_2
+                0x0000000000010e70                irq_entry_1_3
+                0x0000000000010e90                irq_entry_1_4
+                0x0000000000010eb0                irq_entry_1_5
+                0x0000000000010ed0                irq_entry_1_6
+                0x0000000000010ef0                irq_entry_1_7
+                0x0000000000010f3d                initialize_idt
+                0x0000000000011490                syscall_ptime
+                0x0000000000011510                syscall_time
+                0x0000000000011530                initialize_clock
+                0x0000000000011560                timerobj_init
+                0x00000000000115b0                insert_timerobj
+                0x0000000000011630                remove_timerobj
+                0x0000000000011680                starttimer
+                0x0000000000011730                stoptimer
+                0x00000000000117d0                syscall_twakeup
+                0x0000000000011870                syscall_gettsc
+                0x00000000000118e0                secs_to_date
+                0x0000000000011a90                date_to_secs
+                0x0000000000011ba0                rr_cl_tick
+                0x0000000000011c10                rr_cl_sleep
+                0x0000000000011c40                rr_cl_wakeup
+                0x0000000000011c80                rr_cl_fork
+                0x0000000000011c90                rr_cl_forkret
+                0x0000000000011ca0                rr_cl_enterclass
+                0x0000000000011cb0                rr_cl_exitclass
+                0x0000000000011cc0                scheduler
+                0x0000000000012000                check_urgent_flags
+                0x0000000000012080                timer_handler
+                0x00000000000121b0                syscall_tsleep
+                0x0000000000012240                restore_proc
+                0x0000000000012260                debug_mesg
+                0x0000000000012280                timerthread
+                0x0000000000012540                context_switch
+                0x0000000000012c20                kbd_intr_handler
+                0x00000000000131d0                insertkb_char
+                0x00000000000132a0                syscall_getchar
+                0x00000000000132e0                syscall_getchare
+                0x0000000000013300                syscall_getscanchar
+                0x0000000000013320                kbd_read
+                0x0000000000013440                initialize_keyboard
+                0x0000000000013490                strcpy
+                0x00000000000134d0                strcat
+                0x00000000000135a0                strcmp
+                0x0000000000013600                strlen
+                0x0000000000013620                strnlen
+                0x0000000000013650                strncpy
+                0x00000000000136a0                strncat
+                0x0000000000013790                strncmp
+                0x00000000000137f0                toupper
+                0x0000000000013800                tolower
+                0x0000000000013810                isspace
+                0x0000000000013840                isalpha
+                0x0000000000013860                isnum
+                0x0000000000013880                isdigit
+                0x00000000000138a0                isxdigit
+                0x00000000000138d0                strstr
+                0x0000000000013920                strchr
+                0x0000000000013940                initialize_display
+                0x0000000000013a90                syscall_setcursor
+                0x0000000000013b60                output_proc
+                0x0000000000013e50                syscall_puts
+                0x0000000000013e80                syscall_putchar
+                0x0000000000013eb0                scroll_up
+                0x0000000000013f70                scroll_down
+                0x0000000000014040                change_screen
+                0x0000000000014150                get_video_param
+                0x0000000000014170                set_video_param
+                0x0000000000014180                skip_atoi
+                0x00000000000141c0                number
+                0x0000000000014800                vsprintf
+                0x00000000000150e0                sprintf
+                0x0000000000015110                printk
+                0x0000000000015170                print_p
+                0x00000000000151d0                print_context
+                0x00000000000153f0                in_byte
+                0x00000000000153fb                in_word
+                0x0000000000015407                out_byte
+                0x0000000000015415                out_word
+                0x0000000000015424                get_irqstatus
+                0x000000000001542e                enable_irq
+                0x0000000000015451                disable_irq
+                0x000000000001548b                test_and_set
+                0x00000000000154ac                get_eflags
+                0x00000000000154af                cli_intr
+                0x00000000000154b1                sti_intr
+                0x00000000000154b3                restore_eflags
+                0x00000000000154bb                bzero
+                0x00000000000154df                memset
+                0x0000000000015505                memcmp
+                0x0000000000015547                bcopy
+                0x0000000000015573                set_timer_frequency
+                0x000000000001558c                initialize_8259s
+                0x00000000000155af                enable_timer
+                0x00000000000155b9                do_context_switch
+                0x00000000000155e5                initialize_paging
+                0x00000000000155fe                clear_paging
+                0x0000000000015614                restore_paging
+                0x000000000001562a                get_cr2
+                0x000000000001562e                get_cr0
+                0x0000000000015632                get_cr3
+                0x0000000000015636                get_tr
+                0x000000000001563a                mark_tsc
+                0x0000000000015655                math_state_restore
+                0x0000000000015663                math_state_save
+                0x0000000000015671                pte_mark_busy
+                0x0000000000015691                pte_unmark_busy
+                0x00000000000156b1                test_and_set_bitn
+                0x00000000000156d6                clear_bitn
+                0x00000000000156f0                alloc_ftab_slot
+                0x0000000000015750                alloc_process_file_handle
+                0x00000000000157c0                get_vnode
+                0x00000000000157e0                release_vnode
+                0x0000000000015850                delete_vnode
+                0x0000000000015860                increment_ref_count
+                0x0000000000015920                decrement_ref_count
+                0x00000000000159f0                lookup_path
+                0x0000000000015c00                parse_path
+                0x0000000000015d10                get_rootdir
+                0x0000000000015d50                get_curdir
+                0x0000000000015d90                get_pdir
+                0x0000000000015dc0                valid_handle
+                0x0000000000015e30                syscall_open
+                0x0000000000016580                syscall_close
+                0x00000000000166e0                syscall_read
+                0x0000000000016890                syscall_write
+                0x0000000000016a40                syscall_creat
+                0x0000000000017000                syscall_lseek
+                0x0000000000017150                syscall_dup
+                0x0000000000017270                syscall_dup2
+                0x00000000000173b0                syscall_opendir
+                0x0000000000017930                syscall_closedir
+                0x0000000000017950                syscall_readdir
+                0x0000000000017a70                syscall_seekdir
+                0x0000000000017ab0                syscall_telldir
+                0x0000000000017b00                syscall_rewinddir
+                0x0000000000017b40                syscall_mkdir
+                0x0000000000017de0                syscall_rmdir
+                0x00000000000180a0                syscall_chdir
+                0x0000000000018220                syscall_fchdir
+                0x00000000000183c0                syscall_unlink
+                0x0000000000018670                syscall_rename
+                0x0000000000018ec0                syscall_stat
+                0x0000000000019140                syscall_chmod
+                0x0000000000019220                syscall_getcharf
+                0x0000000000019410                syscall_ungetcharf
+                0x0000000000019550                mountroot
+                0x0000000000019750                vnode_add_hashlist
+                0x00000000000197d0                vnode_del_hashlist
+                0x0000000000019850                alloc_vnode
+                0x0000000000019a00                initialize_buffer_cache
+                0x0000000000019b40                getblk
+                0x0000000000019dd0                brelease
+                0x0000000000019e80                write_block
+                0x0000000000019ed0                read_block
+                0x0000000000019fc0                syscall_writeblocks
+                0x000000000001a040                syscall_readblocks
+                0x000000000001a150                bread
+                0x000000000001a1f0                flush_buffers
+                0x000000000001b790                fat12_vop_destroy
+                0x000000000001bb70                read_fat12
+                0x000000000001bba0                fat12_vop_open
+                0x000000000001bbb0                fat12_vop_close
+                0x000000000001bbc0                fat12_vop_read
+                0x000000000001bd50                fat12_vop_write
+                0x000000000001c2c0                fat12_vop_getattr
+                0x000000000001c3d0                fat12_vop_setattr
+                0x000000000001c400                fat12_vop_create
+                0x000000000001c560                fat12_vop_trunc
+                0x000000000001c600                fat12_vop_remove
+                0x000000000001c630                fat12_vop_rename
+                0x000000000001c690                fat12_vop_mkdir
+                0x000000000001c6c0                fat12_vop_rmdir
+                0x000000000001c970                fat12_vop_opendir
+                0x000000000001c980                fat12_vop_closedir
+                0x000000000001c990                fat12_vop_readdir
+                0x000000000001ccb0                fat12_vop_lookup
+                0x000000000001ce40                fat12_vop_telldir
+                0x000000000001ce50                fat12_vop_link
+                0x000000000001ce60                fat12_vop_symlink
+                0x000000000001ce70                fat12_vop_readlink
+                0x000000000001ce80                fat12_vop_ioctl
+                0x000000000001ce90                fat12_vop_access
+                0x000000000001cea0                fat12_vop_inactive
+                0x000000000001ceb0                fat12_vop_rwlock
+                0x000000000001cec0                fat12_vop_rwunlock
+                0x000000000001ced0                fat12_vop_realvp
+                0x000000000001cee0                fat12_vop_getpage
+                0x000000000001cef0                fat12_vop_putpage
+                0x000000000001cf00                fat12_vop_map
+                0x000000000001cf10                fat12_vop_poll
+                0x000000000001cf20                fat12_vfs_mount
+                0x000000000001cf30                fat12_vfs_unmount
+                0x000000000001cf40                fat12_vfs_root
+                0x000000000001cf50                fat12_vfs_sync
+                0x000000000001cf60                syscall_sync
+                0x000000000001cf70                write_fat12
+                0x000000000001cfb0                fat12_vfs_statvfs
+                0x000000000001d0c0                fat12_vop_seekdir
+                0x000000000001d0d0                fat12_vop_seek
+                0x000000000001d0e0                event_wait_remove_thread
+                0x000000000001d310                lockobj_init
+                0x000000000001d340                rlockobj_init
+                0x000000000001d370                eventobj_init
+                0x000000000001d3a0                lend_priority
+                0x000000000001d440                _lock
+                0x000000000001d630                trylock
+                0x000000000001d6e0                sys_unlock
+                0x000000000001d7c0                unlock
+                0x000000000001d910                rlock
+                0x000000000001db10                runlock
+                0x000000000001dc70                sys_event_wakeup
+                0x000000000001dcf0                event_wakeup
+                0x000000000001ddb0                event_sleep
+                0x000000000001df70                event_timed_sleep
+                0x000000000001e2b0                releasesynch_object
+                0x000000000001e300                print_lock
+                0x000000000001e350                do_divide_error
+                0x000000000001e383                do_coprocessor_error
+                0x000000000001e4c7                do_device_not_available
+                0x000000000001e4de                do_simd_coprocessor_error
+                0x000000000001e4fd                do_debug
+                0x000000000001e51c                do_nmi
+                0x000000000001e596                do_inter3
+                0x000000000001e597                do_overflow
+                0x000000000001e5b6                do_bounds
+                0x000000000001e5d5                do_invalid_TSS
+                0x000000000001e600                do_invalid_op
+                0x000000000001e633                do_coprocessor_segment_overrun
+                0x000000000001e652                do_double_fault
+                0x000000000001e679                do_segment_not_present
+                0x000000000001e6d4                do_stack_segment
+                0x000000000001e712                do_general_protection
+                0x000000000001e745                do_alignment_check
+                0x000000000001e764                do_machine_check
+                0x000000000001e777                do_spurious_interrupt_bug
+                0x000000000001e78a                do_page_fault
+                0x000000000001ea85                default_irq_handler
+                0x000000000001eaac                do_unhandled_interrupt
+                0x000000000001eabf                irq_handler
+                0x000000000001eada                math_emulate
+                0x000000000001eaf0                syscall_test
+                0x000000000001eb10                systemcall
+                0x000000000001f990                syscall_notimplemented
+                0x000000000001f9b0                mount_thread
+                0x000000000001f9dd                fat_updater
+                0x000000000001f9fa                mksysthread
+                0x000000000001fa62                create_shell_process
+                0x000000000001fab5                bsend
+                0x000000000001fb78                brecv
+                0x000000000001fbe1                dumm
+                0x000000000001fc0a                dumm1
+                0x000000000001fc33                dummythread
+                0x000000000001fcc7                dummythread4
+                0x000000000001fd6b                dummythread1
+                0x000000000001fe23                display_file
+                0x000000000001feb9                init_system_service_thread
+                0x00000000000200ae                cmain
+                0x00000000000200c7                get_sys_data
+                0x00000000000203f0                idlethread_routine
+                0x00000000000205b0                initialize_systemprocess
+                0x0000000000020fc0                terminate_initialize_system_thread
+                0x0000000000021060                add_readyq
+                0x0000000000021190                del_readyq
+                0x0000000000021290                terminate_thread
+                0x0000000000021520                thread_exit
+                0x0000000000021540                thread_terminate_handler
+                0x0000000000021b60                terminate_process
+                0x0000000000021c30                initialize_tss_table
+                0x0000000000021c60                alloc_thread
+                0x0000000000021d70                create_thread
+                0x0000000000022120                create_process
+                0x0000000000022900                destroy_thread
+                0x0000000000022980                halt_system
+                0x0000000000022a00                suspend
+                0x0000000000022b80                wakeup
+                0x0000000000022bc0                initialize_ldt
+                0x0000000000022c50                create_thread_in_proc
+                0x0000000000022da0                sort_hdrs
+                0x0000000000023a10                exectask_internal
+                0x00000000000243e0                syscall_exectask
+                0x0000000000024400                syscall_exit
+                0x0000000000024490                syscall_getpids
+                0x0000000000024540                syscall_getprocinfo
+                0x0000000000024750                syscall_wait
+                0x00000000000248d0                syscall_kill
+                0x0000000000024980                initialize_irqtask
+                0x0000000000024c10                syscall_pageinfo
+                0x0000000000025930                motor_on
+                0x0000000000025980                motor_off
+                0x00000000000259d0                fdc_intr_handler
+                0x0000000000025ab0                fdc_reset
+                0x0000000000026460                setup_drive
+                0x0000000000026480                fdc_setup
+                0x0000000000026580                reset_drive
+                0x00000000000265a0                fdc_read
+                0x0000000000026810                fdc_write
+                0x0000000000026a50                fdc_format
+                0x0000000000026f80                initialize_floppy_request_bufs
+                0x0000000000026ff0                print_readyq
+                0x00000000000270d0                enqueue_floppy_request
+                0x00000000000271d0                free_floppy_request
+                0x0000000000027220                floppy_read
+                0x00000000000272f0                floppy_write
+                0x00000000000273c0                floppy_format
+                0x00000000000273e0                floppy_setup
+                0x0000000000027400                floppy_thread
+                0x00000000000287f0                nic_isr
+                0x0000000000028a90                free_frame_buffer
+                0x0000000000028ad0                initialize_nic
+                0x0000000000029460                syscall_machid
+                0x00000000000294c0                nicthread
+                0x0000000000029c00                vm_getmemsegment
+                0x0000000000029c50                vm_attachmemsegment
+                0x0000000000029c90                vm_getptentry
+                0x0000000000029cc0                vm_getpdentry
+                0x0000000000029ce0                vm_setattr
+                0x0000000000029df0                vm_getattr
+                0x0000000000029e00                make_page_table
+                0x0000000000029ed0                phys2vmcopy
+                0x0000000000029fe0                vm2physcopy
+                0x000000000002a0f0                vm2vmcopy
+                0x000000000002a2b0                lock_page
+                0x000000000002a310                unlock_page
+                0x000000000002a320                logical2physical
+                0x000000000002a360                core_alloc
+                0x000000000002a5f0                initialize_kernel_pagetables
+                0x000000000002a720                core_free
+                0x000000000002a890                core_alloc_n
+                0x000000000002aad0                initialize_core_info
+                0x000000000002abf0                kmalloc
+                0x000000000002b0b0                kfree
+                0x000000000002b2f0                vm_releasesegment
+                0x000000000002b9a0                vm_getaccesslist
+                0x000000000002b9d0                vm_getdirtylist
+                0x000000000002ba00                vm_detachmemsegment
+                0x000000000002ba70                vm_shrinkregion
+                0x000000000002bd50                vm_expanddownregion
+                0x000000000002c1e0                vm_expandregion
+                0x000000000002c670                vm_delregion
+                0x000000000002c740                vm_delregionend
+                0x000000000002c7b0                vm_addregion
+                0x000000000002c8a0                vm_destroy
+                0x000000000002c990                vm_createvm
+                0x000000000002ca70                syscall_brk
+                0x000000000002cf70                alloc_frame_memory
+                0x000000000002d010                initialize_gdt
+                0x000000000002d090                initialize_codeseg
+                0x000000000002d0f0                initialize_dataseg
+                0x000000000002d150                sdesc
+                0x000000000002d1a0                syscall_prifree
+                0x000000000002d2c0                syscall_primalloc
+                0x000000000002d4f0                print_tss
+                0x000000000002d520                disp_PTE
+                0x000000000002d570                disp_page_table
+                0x000000000002d5e0                disp_page_dir
+                0x000000000002d6b0                print_core_info
+                0x000000000002d700                print_ramsegments
+                0x000000000002d750                print_list
+                0x000000000002d790                print_gdt
+                0x000000000002d7e0                print_minf_statistics
+                0x000000000002d8b0                display_vm
+                0x000000000002d970                removethread_fromsemwait
+                0x000000000002da50                semobj_init
+                0x000000000002dac0                syscall_sem_init
+                0x000000000002dc30                syscall_sem_destroy
+                0x000000000002dd90                syscall_sem_open
+                0x000000000002df90                syscall_sem_close
+                0x000000000002e090                syscall_sem_unlink
+                0x000000000002e1b0                syscall_sem_wait
+                0x000000000002e330                syscall_sem_trywait
+                0x000000000002e3f0                syscall_sem_timedwait
+                0x000000000002e740                syscall_sem_post
+                0x000000000002e860                syscall_sem_getvalue
+                0x000000000002e8a0                remove_pkt
+                0x000000000002ece0                get_processid
+                0x000000000002ecf0                get_threadid
+                0x000000000002ed00                checksum
+                0x000000000002f010                initialize_recvpkts
+                0x000000000002f030                alloc_pktindex
+                0x000000000002f220                free_packet
+                0x000000000002f250                locate_socket
+                0x000000000002f2d0                pktindex
+                0x000000000002f320                initialize_hash_table
+                0x000000000002f340                locate_hash_node
+                0x000000000002f3a0                add_hash_node
+                0x000000000002f440                purge_seqno_hashtable
+                0x000000000002f4c0                initialize_seqno
+                0x000000000002f5c0                initialize_socktable
+                0x000000000002f5e0                increment_sockref_count
+                0x000000000002f630                isThreadBelongs
+                0x000000000002f640                local_broadcast
+                0x000000000002f9f0                delete_socket
+                0x000000000002fb90                psock_send_pkt
+                0x0000000000030000                pkttransmitter
+                0x0000000000030170                send_seqnumber_mesg
+                0x0000000000030360                send_ack
+                0x00000000000305c0                remove_frames_fromtxq
+                0x00000000000306d0                process_ack
+                0x00000000000307f0                deliver_packet
+                0x0000000000030a90                packet_type_data
+                0x0000000000030f40                assemble
+                0x0000000000031300                syscall_trecvfrom
+                0x0000000000031670                trecvfrom_internal
+                0x0000000000031c60                create_defsock
+                0x0000000000031d70                syscall_socket
+                0x0000000000031f20                syscall_bind
+                0x0000000000032040                recv_fromsock_stream
+                0x00000000000320e0                recv_fromsock_dgram
+                0x0000000000032340                syscall_recv
+                0x0000000000032460                syscall_recvfrom
+                0x0000000000032530                sock_send
+                0x00000000000328e0                internal_tsend
+                0x0000000000032d60                sock_broadcast
+                0x0000000000032e10                syscall_tsendto
+                0x0000000000032f40                syscall_broadcast
+                0x0000000000032ff0                decrement_sockref_count
+                0x0000000000033150                syscall_send
+                0x0000000000033250                syscall_sendto
+                0x0000000000033360                syscall_connect
+                0x0000000000033560                syscall_accept
+                0x0000000000033810                syscall_listen
+                0x0000000000033870                syscall_close_socket
+                0x00000000000338c0                dump_frame
+                0x0000000000033ac0                dump_packet
+                0x0000000000033b10                display_sockets
+                0x0000000000033c20                syscall_pthread_create
+                0x0000000000033d50                syscall_pthread_self
+                0x0000000000033d70                pthread_equal
+                0x0000000000033d90                syscall_pthread_exit
+                0x0000000000033dd0                syscall_pthread_join
+                0x0000000000033f30                syscall_pthread_detach
+                0x0000000000034060                syscall_pthread_yield
+                0x0000000000034090                syscall_pthread_mutex_init
+                0x00000000000340c0                syscall_pthread_mutex_destroy
+                0x00000000000340d0                syscall_pthread_mutex_trylock
+                0x00000000000340e0                syscall_pthread_mutex_lock
+                0x00000000000340f0                pthread_mutex_timedlock
+                0x0000000000034100                syscall_pthread_mutex_unlock
+                0x0000000000034110                pthread_mutexattr_init
+                0x0000000000034120                pthread_mutexattr_destroy
+                0x0000000000034130                pthread_mutexattr_getpshared
+                0x0000000000034140                pthread_mutexattr_setpshared
+                0x0000000000034150                syscall_pthread_cond_init
+                0x0000000000034170                syscall_pthread_cond_destroy
+                0x0000000000034180                syscall_pthread_cond_signal
+                0x0000000000034230                syscall_pthread_cond_broadcast
+                0x0000000000034240                syscall_pthread_cond_wait
+                0x0000000000034280                pthread_cond_timedwait
+                0x0000000000034290                pthread_condattr_init
+                0x00000000000342a0                pthread_condattr_destroy
+                0x00000000000342b0                pthread_condattr_getpshared
+                0x00000000000342c0                pthread_condattr_setpshared
+                0x00000000000342d0                pthread_spin_init
+                0x00000000000342e0                pthread_spin_destroy
+                0x00000000000342f0                pthread_spin_lock
+                0x0000000000034300                pthread_spin_trylock
+                0x0000000000034310                pthread_spin_unlock
+                0x0000000000034320                syscall_pthread_barrier_init
+                0x0000000000034350                pthread_barrier_destroy
+                0x0000000000034360                pthread_barrierattr_init
+                0x0000000000034370                pthread_barrierattr_destroy
+                0x0000000000034380                pthread_barrierattr_getpshared
+                0x0000000000034390                pthread_barrierattr_setpshared
+                0x00000000000343a0                syscall_pthread_barrier_wait
+                0x000000000003508c       0x39 timer.o
+                0x00000000000350c8      0x225 kbd.o
+                0x00000000000352f0      0x1c4 vdisplay.o
+                0x00000000000354b4       0x8f fs.o
+                0x0000000000035544      0x101 lock.o
+                0x0000000000035648       0x8b process.o
+                0x00000000000356d4       0xcb fdc.o
+                0x00000000000357a0      0x251 nic.o
+                0x00000000000359f4      0x358 vmmap.o
+                0x0000000000035d4c      0x3be socket.o
+                0x000000000003610a       0x44 timer.o
+                0x000000000003614e       0x25 kbd.o
+                0x0000000000036173        0x7 vdisplay.o
+                0x000000000003617a       0x1d fs.o
+                0x0000000000036197        0x5 fat12.o
+                0x000000000003619c        0x5 lock.o
+                0x00000000000361a1       0x3b syscalls.o
+                0x00000000000361dc       0x56 process.o
+                0x0000000000036232       0x1d fdc.o
+                0x000000000003624f       0x3e nic.o
+                0x000000000003628d      0x133 vmmap.o
+                0x00000000000363c0       0xbd socket.o
+                0x000000000003bae0                idt_table
+                0x000000000003bc98                maxpri
+                0x000000000003bc9c                basepri
+                0x000000000003bca0                key_table
+                0x000000000003c1e0                fat12_vfsops
+                0x000000000003c200                fat12_vnops
+                0x000000000003c2a0                SCHED_CLASS_SYSTEM_FUNCS
+                0x000000000003c2bc                initial_eflags
+                0x000000000003c2c0                gdt_desc
+                0x000000000003c2e0                gdt_table
+                0x000000000003cca0                no_hosts
+                0x000000000003ccc0                default_ports
+                0x000000000003cd00                next_internal_port_no
+                0x000000000003cd20                temp_proc_map
+                0x000000000003d120                host_hwaddr_table
+                0x000000000003d720                barrid
+                0x000000000003d724                condid
+                0x000000000003d728                mutexid
+                0x000000000003d72c                bss_start = .
+                0x000000000003e000                timed_event_thread
+                0x000000000003e004                secs
+                0x000000000003e008                millesecs
+                0x000000000003e00c                timers
+                0x000000000003e010                timeoutflag
+                0x000000000003e014                priocompute
+                0x000000000003e018                kprunrun
+                0x000000000003e01c                runrun
+                0x000000000003e020                kb_flags
+                0x000000000003e034                Y
+                0x000000000003e038                X
+                0x000000000003e03c                delayed_write_q_tail
+                0x000000000003e040                delayed_write_q_head
+                0x000000000003e044                free_buff_list_tail
+                0x000000000003e048                free_buff_list_head
+                0x000000000003e04c                vnhashlist_lock_owner
+                0x000000000003e050                vnhashlist_lock
+                0x000000000003e054                rootvnode
+                0x000000000003e058                vfs_list
+                0x000000000003e05c                count
+                0x000000000003e060                current_process
+                0x000000000003e064                current_thread
+                0x000000000003e068                unusedthr_count
+                0x000000000003e06c                unused_threads
+                0x000000000003e070                terminated_threads
+                0x000000000003e074                used_threads
+                0x000000000003e078                unusedproc_count
+                0x000000000003e07c                unused_processes
+                0x000000000003e080                suspended_processes
+                0x000000000003e084                used_processes
+                0x000000000003e0a0                ready_qtail
+                0x000000000003e120                ready_qhead
+                0x000000000003e1a0                ready_qlock_owner
+                0x000000000003e1a4                ready_qlock
+                0x000000000003e1a8                fdc_thread
+                0x000000000003e1ac                req_drbuf_head
+                0x000000000003e1b0                free_drbuf_head
+                0x000000000003e1b4                motor_on_flag
+                0x000000000003e1bc                nicwait_start
+                0x000000000003e1c0                __ethseqno__
+                0x000000000003e1c4                this_hwaddr
+                0x000000000003e1c8                tx_wait_pkt
+                0x000000000003e1cc                tx_q_tail
+                0x000000000003e1d0                tx_q_head
+                0x000000000003e1d4                rx_q_tail
+                0x000000000003e1d8                rx_q_head
+                0x000000000003e1dc                kmcount
+                0x000000000003e1e0                kmused_list
+                0x000000000003e1e4                kmavail_list
+                0x000000000003e1e8                kmmalloc_info
+                0x000000000003e1ec                no_of_ram_segments
+                0x000000000003e1f0                first_block
+                0x000000000003e1f4                assembler_active
+                0x000000000003e1f8                socklist_hdr
+                0x000000000003e1fc                initsecs
+                0x000000000003e200                timer_intr_thread
+                0x000000000003e204                timerthr_sleep
+                0x000000000003e21c                timerq_lock
+                0x000000000003e238                kbd_thread
+                0x000000000003e23c                kbd_wait_lock
+                0x000000000003e258                ttt
+                0x000000000003e260                buffer_cache_lock
+                0x000000000003e280                buffers
+                0x0000000000042510                vnlist_lock
+                0x000000000004252c                write_queue_lock
+                0x0000000000042548                brelse_event
+                0x0000000000042560                floppy_info
+                0x000000000004256c                ftlck
+                0x00000000000425a0                vnlist_hdr
+                0x0000000000042600                openFileTable
+                0x0000000000042dd0                harddisk_info
+                0x0000000000042de0                hash_queue_buffers
+                0x0000000000042e00                IRQ_handlers
+                0x0000000000042e40                lck4
+                0x0000000000042e5c                lck3
+                0x0000000000042e78                e2
+                0x0000000000042e90                lck1
+                0x0000000000042eac                sync_event
+                0x0000000000042ec4                lck2
+                0x0000000000042ee0                e1
+                0x0000000000042f00                unused_proclock
+                0x0000000000042f20                initialize_system
+                0x0000000000047064                suspended_proclock
+                0x0000000000047080                intr_threads
+                0x00000000000470c0                used_proclock
+                0x00000000000470dc                gdt_lock
+                0x00000000000470f8                terminatehandler_event
+                0x0000000000047110                tsstable_lock
+                0x000000000004712c                ldt_lock
+                0x0000000000047160                idle_thread
+                0x000000000004b2a8                tss_table
+                0x0000000000051aa8                termthr_lock
+                0x0000000000051ae0                sysproc_datareg
+                0x0000000000051b20                system_process
+                0x0000000000051c38                used_threadlock
+                0x0000000000051c54                unused_threadlock
+                0x0000000000051c80                sysproc_outputinfo
+                0x0000000000052c60                sysproc_fileinfo
+                0x0000000000052ce0                sysproc_datasegment
+                0x0000000000052d0c                kbd_focus
+                0x0000000000052d20                sysproc_inputinfo
+                0x0000000000052f60                sysproc_vm
+                0x0000000000052f88                ldt_table
+                0x00000000000532a0                initial_fpustate
+                0x0000000000053320                dma_ch
+                0x0000000000053340                drbuf
+                0x0000000000053bd8                floppy_req_entry_free_event
+                0x0000000000053bf0                dma_addr
+                0x0000000000053bf4                fdc_waitevent
+                0x0000000000053c0c                free_drbuf_lock
+                0x0000000000053c28                fdd
+                0x0000000000053c30                drivePresent
+                0x0000000000053c34                floppy_event
+                0x0000000000053c4c                req_drbuf_lock
+                0x0000000000053c68                fdc_lck
+                0x0000000000053c84                pri_fdc
+                0x0000000000053ca0                rxq_lock
+                0x0000000000053cbc                nicthr
+                0x0000000000053cc0                nic
+                0x0000000000053d1c                this_hostid
+                0x0000000000053d20                ethseqno_list
+                0x0000000000053f20                nic_send_event
+                0x0000000000053f38                txq_lock
+                0x0000000000053f54                nic_intr_thread
+                0x0000000000053f58                nic_recv_event
+                0x0000000000053f70                rx_q_empty
+                0x0000000000053fa0                dummypkt
+                0x0000000000055000                bitmap
+                0x0000000000057000                core_lock
+                0x000000000005701c                KERNEL_PAGE_TABLE
+                0x0000000000057020                ptlist
+                0x0000000000057420                ram_segments
+                0x0000000000058000                KERNEL_PAGEDIR
+                0x0000000000059000                kmalloc_lock
+                0x0000000000059020                semtable
+                0x0000000000059ef8                semtable_lock
+                0x0000000000059f20                assembthread
+                0x0000000000059f40                hash_table
+                0x000000000005a008                pkt_send_event
+                0x000000000005a020                socktable_lock
+                0x000000000005a03c                socklist_lock
+                0x000000000005a058                trans
+                0x000000000005a060                rcvpkts
+                0x000000000005a200                socktable
+                0x000000000005c078                bss_end = .
+                    0x18              fdc.o
+                    0x18              process.o
+                    0x2c              process.o
+add_hash_node                                     socket.o
+add_readyq                                        process.o
+alignment_check                                   intr_entry.o
+Allocating common symbols
+alloc_frame_memory                                vmmap.o
+alloc_ftab_slot                                   fs.o
+alloc_pktindex                                    socket.o
+alloc_process_file_handle                         fs.o
+alloc_thread                                      process.o
+alloc_vnode                                       fs.o
+assembler_active                                  socket.o
+assemble                                          socket.o
+assembthread        0x4               socket.o
+assembthread                                      socket.o
+barrid                                            pthread.o
+basepri                                           timer.o
+bcopy                                             klib.o
+bitmap              0x2000            vmmap.o
+bitmap                                            vmmap.o
+bounds                                            intr_entry.o
+bread                                             fs.o
+brecv                                             main.o
+brelease                                          fs.o
+brelse_event        0x18              fs.o
+brelse_event                                      fs.o
+bsend                                             main.o
+ *(.bss)
+.bss            0x000000000003e000    0x1e078
+ .bss           0x000000000003e000       0x20 timer.o
+ .bss           0x000000000003e020       0x14 kbd.o
+ .bss           0x000000000003e034        0x0 string.o
+ .bss           0x000000000003e034        0x8 vdisplay.o
+ .bss           0x000000000003e03c       0x20 fs.o
+ .bss           0x000000000003e05c        0x0 fat12.o
+ .bss           0x000000000003e05c        0x0 lock.o
+ .bss           0x000000000003e05c        0x0 procintr.o
+ .bss           0x000000000003e05c        0x0 syscalls.o
+ .bss           0x000000000003e05c        0x4 main.o
+ .bss           0x000000000003e060      0x148 process.o
+ .bss           0x000000000003e1a8       0x12 fdc.o
+ .bss           0x000000000003e1bc       0x20 nic.o
+ .bss           0x000000000003e1dc       0x18 vmmap.o
+ .bss           0x000000000003e1f4        0x0 semaphore.o
+ .bss           0x000000000003e1f4        0x8 socket.o
+ .bss           0x000000000003e1fc        0x0 pthread.o
+bss_end                                           initboot.o
+bss_start                                         initboot.o
+buffer_cache_lock   0x1c              fs.o
+buffer_cache_lock                                 fs.o
+buffers             0x4290            fs.o
+buffers                                           fs.o
+bzero                                             klib.o
+change_screen                                     vdisplay.o
+checksum                                          socket.o
+check_urgent_flags                                timer.o
+clear_bitn                                        klib.o
+clear_paging                                      klib.o
+cli_intr                                          klib.o
+cmain                                             main.o
+ .comment       0x0000000000000000       0x1f initboot.o
+.comment        0x0000000000000000      0x35a
+ .comment       0x000000000000001f       0x1f intr_entry.o
+ .comment       0x000000000000003e       0x2d timer.o
+ .comment       0x000000000000006b       0x2d kbd.o
+ .comment       0x0000000000000098       0x2d string.o
+ .comment       0x00000000000000c5       0x2d vdisplay.o
+ .comment       0x00000000000000f2       0x1f klib.o
+ .comment       0x0000000000000111       0x2d fs.o
+ .comment       0x000000000000013e       0x2d fat12.o
+ .comment       0x000000000000016b       0x2d lock.o
+ .comment       0x0000000000000198       0x2d procintr.o
+ .comment       0x00000000000001c5       0x2d syscalls.o
+ .comment       0x00000000000001f2       0x2d main.o
+ .comment       0x000000000000021f       0x2d process.o
+ .comment       0x000000000000024c       0x2d fdc.o
+ .comment       0x0000000000000279       0x2d nic.o
+ .comment       0x00000000000002a6       0x2d vmmap.o
+ .comment       0x00000000000002d3       0x2d semaphore.o
+ .comment       0x0000000000000300       0x2d socket.o
+ .comment       0x000000000000032d       0x2d pthread.o
+ *(COMMON)
+ COMMON         0x000000000003e1fc       0x3c timer.o
+ COMMON         0x000000000003e238       0x24 kbd.o
+ COMMON         0x000000000003e260     0x4b9c fs.o
+ COMMON         0x0000000000042e00       0x40 procintr.o
+ COMMON         0x0000000000042e40       0xb8 main.o
+ COMMON         0x0000000000042f00    0x1041c process.o
+ COMMON         0x0000000000053320      0x96e fdc.o
+ COMMON         0x0000000000053ca0      0x364 nic.o
+ COMMON         0x0000000000055000     0x401c vmmap.o
+ COMMON         0x0000000000059020      0xef4 semaphore.o
+ COMMON         0x0000000000059f20     0x2158 socket.o
+Common symbol       size              file
+condid                                            pthread.o
+context_switch                                    timer.o
+coprocessor_error                                 intr_entry.o
+coprocessor_segment_overrun                       intr_entry.o
+core_alloc_n                                      vmmap.o
+core_alloc                                        vmmap.o
+core_free                                         vmmap.o
+core_lock           0x1c              vmmap.o
+core_lock                                         vmmap.o
+count                                             main.o
+create_defsock                                    socket.o
+create_process                                    process.o
+create_shell_process                              main.o
+create_thread_in_proc                             process.o
+create_thread                                     process.o
+Cross Reference Table
+current_process                                   process.o
+current_thread                                    process.o
+ *(.data)
+ .data          0x000000000003bae0        0x0 initboot.o
+ .data          0x000000000003bae0      0x1b8 intr_entry.o
+.data           0x000000000003bae0     0x1c4c
+ .data          0x000000000003bc98        0x8 timer.o
+ .data          0x000000000003bca0      0x530 kbd.o
+ .data          0x000000000003c1d0        0x0 string.o
+ .data          0x000000000003c1d0        0x0 vdisplay.o
+ .data          0x000000000003c1d0        0x6 klib.o
+ .data          0x000000000003c1e0       0xa4 fs.o
+ .data          0x000000000003c284        0x0 fat12.o
+ .data          0x000000000003c284        0x0 lock.o
+ .data          0x000000000003c284        0x0 main.o
+ .data          0x000000000003c284        0x0 procintr.o
+ .data          0x000000000003c284        0x0 syscalls.o
+ .data          0x000000000003c2a0      0x9e2 process.o
+ .data          0x000000000003cc84        0x0 fdc.o
+ .data          0x000000000003cca0       0x44 nic.o
+ .data          0x000000000003cce4        0x0 vmmap.o
+ .data          0x000000000003cce4        0x4 semaphore.o
+ .data          0x000000000003cd00      0xa20 socket.o
+ .data          0x000000000003d720        0xc pthread.o
+date_to_secs                                      timer.o
+debug                                             intr_entry.o
+debug_mesg                                        timer.o
+decrement_ref_count                               fs.o
+decrement_sockref_count                           socket.o
+*default*        0x0000000000000000 0xffffffffffffffff
+default_irq_handler                               procintr.o
+default_ports                                     nic.o
+delayed_write_q_head                              fs.o
+delayed_write_q_tail                              fs.o
+delete_socket                                     socket.o
+delete_vnode                                      fs.o
+deliver_packet                                    socket.o
+del_readyq                                        process.o
+destroy_thread                                    process.o
+device_not_available                              intr_entry.o
+disable_irq                                       klib.o
+disp_int                                          intr_entry.o
+display_file                                      main.o
+display_sockets                                   socket.o
+display_vm                                        vmmap.o
+disp_page_dir                                     vmmap.o
+disp_page_table                                   vmmap.o
+disp_PTE                                          vmmap.o
+divide_error                                      intr_entry.o
+dma_addr            0x4               fdc.o
+dma_addr                                          fdc.o
+dma_ch              0x8               fdc.o
+dma_ch                                            fdc.o
+do_alignment_check                                procintr.o
+do_bounds                                         procintr.o
+do_context_switch                                 klib.o
+do_coprocessor_error                              procintr.o
+do_coprocessor_segment_overrun                    procintr.o
+do_debug                                          procintr.o
+do_device_not_available                           procintr.o
+do_divide_error                                   procintr.o
+do_double_fault                                   procintr.o
+do_general_protection                             procintr.o
+do_inter3                                         procintr.o
+do_invalid_op                                     procintr.o
+do_invalid_TSS                                    procintr.o
+do_machine_check                                  procintr.o
+do_nmi                                            procintr.o
+do_overflow                                       procintr.o
+do_page_fault                                     procintr.o
+do_segment_not_present                            procintr.o
+do_simd_coprocessor_error                         procintr.o
+do_spurious_interrupt_bug                         procintr.o
+do_stack_segment                                  procintr.o
+double_fault                                      intr_entry.o
+do_unhandled_interrupt                            procintr.o
+drbuf               0x898             fdc.o
+drbuf                                             fdc.o
+drivePresent        0x4               fdc.o
+drivePresent                                      fdc.o
+dumm1                                             main.o
+dumm                                              main.o
+dummypkt            0x64              nic.o
+dummypkt                                          nic.o
+dummythread1                                      main.o
+dummythread4                                      main.o
+dummythread                                       main.o
+dump_frame                                        socket.o
+dump_packet                                       socket.o
+e1                  0x18              main.o
+e1                                                main.o
+e2                  0x18              main.o
+e2                                                main.o
+ .eh_frame      0x0000000000036480      0x3e8 timer.o
+.eh_frame       0x0000000000036480     0x565c
+ .eh_frame      0x0000000000036868      0x1c0 kbd.o
+ .eh_frame      0x0000000000036a28      0x234 string.o
+ .eh_frame      0x0000000000036c5c      0x320 vdisplay.o
+ .eh_frame      0x0000000000036f7c      0xc5c fs.o
+ .eh_frame      0x0000000000037bd8      0x7e8 fat12.o
+ .eh_frame      0x00000000000383c0      0x410 lock.o
+ .eh_frame      0x00000000000387d0      0x25c procintr.o
+ .eh_frame      0x0000000000038a2c       0x80 syscalls.o
+ .eh_frame      0x0000000000038aac      0x194 main.o
+ .eh_frame      0x0000000000038c40      0x6a4 process.o
+ .eh_frame      0x00000000000392e4      0x5ac fdc.o
+ .eh_frame      0x0000000000039890      0x190 nic.o
+ .eh_frame      0x0000000000039a20      0xc64 vmmap.o
+ .eh_frame      0x000000000003a684      0x334 semaphore.o
+ .eh_frame      0x000000000003a9b8      0xcbc socket.o
+ .eh_frame      0x000000000003b674      0x468 pthread.o
+enable_irq                                        klib.o
+enable_timer                                      klib.o
+enqueue_floppy_request                            fdc.o
+ethseqno_list       0x200             nic.o
+ethseqno_list                                     nic.o
+__ethseqno__                                      nic.o
+eventobj_init                                     lock.o
+event_sleep                                       lock.o
+event_timed_sleep                                 lock.o
+event_wait_remove_thread                          lock.o
+event_wakeup                                      lock.o
+exectask_internal                                 process.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+                                                  fat12.o
+fat12_vfs_mount                                   fat12.o
+fat12_vfsops                                      fs.o
+fat12_vfs_root                                    fat12.o
+fat12_vfs_statvfs                                 fat12.o
+fat12_vfs_sync                                    fat12.o
+fat12_vfs_unmount                                 fat12.o
+fat12_vnops                                       fs.o
+fat12_vop_access                                  fat12.o
+fat12_vop_closedir                                fat12.o
+fat12_vop_close                                   fat12.o
+fat12_vop_create                                  fat12.o
+fat12_vop_destroy                                 fat12.o
+fat12_vop_getattr                                 fat12.o
+fat12_vop_getpage                                 fat12.o
+fat12_vop_inactive                                fat12.o
+fat12_vop_ioctl                                   fat12.o
+fat12_vop_link                                    fat12.o
+fat12_vop_lookup                                  fat12.o
+fat12_vop_map                                     fat12.o
+fat12_vop_mkdir                                   fat12.o
+fat12_vop_opendir                                 fat12.o
+fat12_vop_open                                    fat12.o
+fat12_vop_poll                                    fat12.o
+fat12_vop_putpage                                 fat12.o
+fat12_vop_readdir                                 fat12.o
+fat12_vop_read                                    fat12.o
+fat12_vop_readlink                                fat12.o
+fat12_vop_realvp                                  fat12.o
+fat12_vop_remove                                  fat12.o
+fat12_vop_rename                                  fat12.o
+fat12_vop_rmdir                                   fat12.o
+fat12_vop_rwlock                                  fat12.o
+fat12_vop_rwunlock                                fat12.o
+fat12_vop_seekdir                                 fat12.o
+fat12_vop_seek                                    fat12.o
+fat12_vop_setattr                                 fat12.o
+fat12_vop_symlink                                 fat12.o
+fat12_vop_telldir                                 fat12.o
+fat12_vop_trunc                                   fat12.o
+fat12_vop_write                                   fat12.o
+fat_updater                                       main.o
+fdc_format                                        fdc.o
+fdc_intr_handler                                  fdc.o
+fdc_lck             0x1c              fdc.o
+fdc_lck                                           fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+                                                  fdc.o
+fdc_read                                          fdc.o
+fdc_reset                                         fdc.o
+fdc_setup                                         fdc.o
+fdc_thread                                        fdc.o
+fdc_waitevent       0x18              fdc.o
+fdc_waitevent                                     fdc.o
+fdc_write                                         fdc.o
+fdd                 0x8               fdc.o
+fdd                                               fdc.o
+ *fill*         0x00000000000108cd        0x3 00
+ *fill*         0x0000000000011482        0xe 00
+ *fill*         0x00000000000125cb        0x5 00
+ *fill*         0x0000000000013481        0xf 00
+ *fill*         0x0000000000013936        0xa 00
+ *fill*         0x00000000000153e9        0x7 00
+ *fill*         0x00000000000156ea        0x6 00
+ *fill*         0x000000000001a32a        0x6 00
+ *fill*         0x000000000001d0d3        0xd 00
+ *fill*         0x000000000001e34f        0x1 00
+ *fill*         0x000000000001eaed        0x3 00
+ *fill*         0x000000000001f9ad        0x3 00
+ *fill*         0x00000000000203ee        0x2 00
+ *fill*         0x0000000000024ccf        0x1 00
+ *fill*         0x000000000002822e        0x2 00
+ *fill*         0x0000000000029b17        0x9 00
+ *fill*         0x000000000002d965        0xb 00
+ *fill*         0x000000000002e893        0xd 00
+ *fill*         0x0000000000034b27        0x1 00
+ *fill*         0x0000000000035059        0x3 00
+ *fill*         0x00000000000350c5        0x3 00
+ *fill*         0x00000000000352ed        0x3 00
+ *fill*         0x0000000000035543        0x1 00
+ *fill*         0x0000000000035645        0x3 00
+ *fill*         0x00000000000356d3        0x1 00
+ *fill*         0x000000000003579f        0x1 00
+ *fill*         0x00000000000359f1        0x3 00
+ *fill*         0x000000000003c1d6        0xa 00
+ *fill*         0x000000000003c284       0x1c 00
+ *fill*         0x000000000003cc82        0x2 00
+ *fill*         0x000000000003cc84       0x1c 00
+ *fill*         0x000000000003cce8       0x18 00
+ *fill*         0x000000000003e1ba        0x2 00
+ *fill*         0x000000000003e25c        0x4 00
+ *fill*         0x0000000000042dfc        0x4 00
+ *fill*         0x0000000000042ef8        0x8 00
+ *fill*         0x000000000005331c        0x4 00
+ *fill*         0x0000000000053c8e       0x12 00
+ *fill*         0x0000000000054004      0xffc 00
+ *fill*         0x000000000005901c        0x4 00
+ *fill*         0x0000000000059f14        0xc 00
+first_block                                       vmmap.o
+ *(.fixup)
+floppy_event        0x18              fdc.o
+floppy_event                                      fdc.o
+floppy_format                                     fdc.o
+floppy_info         0xc               fs.o
+floppy_info                                       main.o
+floppy_read                                       fdc.o
+floppy_req_entry_free_event
+floppy_req_entry_free_event                       fdc.o
+floppy_setup                                      fdc.o
+floppy_thread                                     fdc.o
+floppy_write                                      fdc.o
+flush_buffers                                     fs.o
+free_buff_list_head                               fs.o
+free_buff_list_tail                               fs.o
+free_drbuf_head                                   fdc.o
+free_drbuf_lock     0x1c              fdc.o
+free_drbuf_lock                                   fdc.o
+free_floppy_request                               fdc.o
+free_frame_buffer                                 nic.o
+free_packet                                       socket.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+                                                  fs.o
+ftlck               0x1c              fs.o
+ftlck                                             fs.o
+gdt_desc                                          process.o
+gdt_lock            0x1c              process.o
+gdt_lock                                          process.o
+gdt_table                                         process.o
+general_protection                                intr_entry.o
+getblk                                            fs.o
+get_cr0                                           klib.o
+get_cr2                                           klib.o
+get_cr3                                           klib.o
+get_curdir                                        fs.o
+get_eflags                                        klib.o
+get_irqstatus                                     klib.o
+get_pdir                                          fs.o
+get_processid                                     socket.o
+get_rootdir                                       fs.o
+get_sys_data                                      main.o
+get_threadid                                      socket.o
+get_tr                                            klib.o
+get_video_param                                   vdisplay.o
+get_vnode                                         fs.o
+halt_system                                       process.o
+harddisk_info       0x10              fs.o
+harddisk_info                                     main.o
+hash_queue_buffers  0x1c              fs.o
+hash_queue_buffers                                fs.o
+hash_table          0xc8              socket.o
+hash_table                                        socket.o
+host_hwaddr_table                                 socket.o
+idle_thread         0x4144            process.o
+idle_thread                                       process.o
+idlethread_routine                                process.o
+idt_table                                         intr_entry.o
+ignore_int                                        intr_entry.o
+in_byte                                           klib.o
+increment_ref_count                               fs.o
+increment_sockref_count                           socket.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+                                                  initboot.o
+initial_eflags                                    process.o
+initial_fpustate    0x7c              process.o
+initial_fpustate                                  process.o
+initialize_8259s                                  klib.o
+initialize_buffer_cache                           fs.o
+initialize_clock                                  timer.o
+initialize_codeseg                                vmmap.o
+initialize_core_info                              vmmap.o
+initialize_dataseg                                vmmap.o
+initialize_display                                vdisplay.o
+initialize_floppy_request_bufs                    fdc.o
+initialize_gdt                                    vmmap.o
+initialize_hash_table                             socket.o
+initialize_idt                                    intr_entry.o
+initialize_irqtask                                process.o
+initialize_kernel_pagetables                      vmmap.o
+initialize_keyboard                               kbd.o
+initialize_ldt                                    process.o
+initialize_nic                                    nic.o
+initialize_paging                                 klib.o
+initialize_recvpkts                               socket.o
+initialize_seqno                                  socket.o
+initialize_socktable                              socket.o
+initialize_system   0x4144            process.o
+initialize_system                                 process.o
+initialize_systemprocess                          process.o
+initialize_tss_table                              process.o
+initsecs            0x4               timer.o
+initsecs                                          main.o
+init_system_service_thread                        main.o
+insertkb_char                                     kbd.o
+insert_timerobj                                   timer.o
+inter3                                            intr_entry.o
+internal_tsend                                    socket.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+                                                  intr_entry.o
+intr_threads        0x40              process.o
+intr_threads                                      nic.o
+invalid_op                                        intr_entry.o
+invalid_TSS                                       intr_entry.o
+in_word                                           klib.o
+irq_entry_0_0                                     intr_entry.o
+irq_entry_0_1                                     intr_entry.o
+irq_entry_0_2                                     intr_entry.o
+irq_entry_0_3                                     intr_entry.o
+irq_entry_0_4                                     intr_entry.o
+irq_entry_0_5                                     intr_entry.o
+irq_entry_0_6                                     intr_entry.o
+irq_entry_0_7                                     intr_entry.o
+irq_entry_1_0                                     intr_entry.o
+irq_entry_1_1                                     intr_entry.o
+irq_entry_1_2                                     intr_entry.o
+irq_entry_1_3                                     intr_entry.o
+irq_entry_1_4                                     intr_entry.o
+irq_entry_1_5                                     intr_entry.o
+irq_entry_1_6                                     intr_entry.o
+irq_entry_1_7                                     intr_entry.o
+irq_handler                                       procintr.o
+IRQ_handlers        0x40              procintr.o
+IRQ_handlers                                      procintr.o
+irq_mesg                                          intr_entry.o
+isalpha                                           string.o
+isdigit                                           string.o
+isnum                                             string.o
+isspace                                           string.o
+isThreadBelongs                                   socket.o
+isxdigit                                          string.o
+kbd_focus           0x4               process.o
+kbd_focus                                         process.o
+kbd_intr_handler                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+                                                  kbd.o
+kbd_read                                          kbd.o
+kbd_thread          0x4               kbd.o
+kbd_thread                                        kbd.o
+kbd_wait_lock       0x1c              kbd.o
+kbd_wait_lock                                     process.o
+kb_flags                                          kbd.o
+KERNEL_PAGEDIR      0x1000            vmmap.o
+KERNEL_PAGEDIR                                    vmmap.o
+KERNEL_PAGE_TABLE   0x4               vmmap.o
+KERNEL_PAGE_TABLE                                 vmmap.o
+key_table                                         kbd.o
+kfree                                             vmmap.o
+                                                  klib.o
+kmalloc_lock        0x1c              vmmap.o
+kmalloc_lock                                      vmmap.o
+kmalloc                                           vmmap.o
+kmavail_list                                      vmmap.o
+kmcount                                           vmmap.o
+kmmalloc_info                                     vmmap.o
+kmused_list                                       vmmap.o
+kprunrun                                          timer.o
+ *(.kstrtab)
+.kstrtab
+lck1                0x1c              main.o
+lck1                                              main.o
+lck2                0x1c              main.o
+lck2                                              main.o
+lck3                0x1c              main.o
+lck3                                              main.o
+lck4                0x1c              main.o
+lck4                                              main.o
+ldt_lock            0x1c              process.o
+ldt_lock                                          process.o
+ldt_table           0x300             process.o
+ldt_table                                         vmmap.o
+lend_priority                                     lock.o
+Linker script and memory map
+LOAD fat12.o
+LOAD fdc.o
+LOAD fs.o
+LOAD initboot.o
+LOAD intr_entry.o
+LOAD kbd.o
+LOAD klib.o
+LOAD lock.o
+LOAD main.o
+LOAD nic.o
+LOAD process.o
+LOAD procintr.o
+LOAD pthread.o
+LOAD semaphore.o
+LOAD socket.o
+LOAD string.o
+LOAD syscalls.o
+LOAD timer.o
+LOAD vdisplay.o
+LOAD vmmap.o
+local_broadcast                                   socket.o
+locate_hash_node                                  socket.o
+locate_socket                                     socket.o
+_lock                                             lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+                                                  lock.o
+lockobj_init                                      lock.o
+lock_page                                         vmmap.o
+logical2physical                                  vmmap.o
+lookup_path                                       fs.o
+machine_check                                     intr_entry.o
+_main                                             initboot.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+                                                  main.o
+make_page_table                                   vmmap.o
+mark_tsc                                          klib.o
+math_emulate                                      procintr.o
+math_state_restore                                klib.o
+math_state_save                                   klib.o
+maxpri                                            timer.o
+memcmp                                            klib.o
+Memory Configuration
+memset                                            klib.o
+millesecs                                         timer.o
+mksysthread                                       main.o
+motor_off                                         fdc.o
+motor_on                                          fdc.o
+motor_on_flag                                     fdc.o
+mountroot                                         fs.o
+mount_thread                                      main.o
+mutexid                                           pthread.o
+Name             Origin             Length             Attributes
+next_internal_port_no                             socket.o
+nic                 0x5c              nic.o
+nic_intr_thread     0x4               nic.o
+nic_intr_thread                                   nic.o
+nic_isr                                           nic.o
+nic                                               nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+                                                  nic.o
+nic_recv_event      0x18              nic.o
+nic_recv_event                                    socket.o
+nic_send_event      0x18              nic.o
+nic_send_event                                    socket.o
+nicthr              0x4               nic.o
+nicthread                                         nic.o
+nicthr                                            nic.o
+nicwait_start                                     nic.o
+nmi                                               intr_entry.o
+no_hosts                                          nic.o
+no_of_ram_segments                                vmmap.o
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+ .note.GNU-stack
+.note.GNU-stack
+number                                            vdisplay.o
+openFileTable       0x7d0             fs.o
+openFileTable                                     fs.o
+out_byte                                          klib.o
+OUTPUT(kernel binary)
+output_proc                                       vdisplay.o
+out_word                                          klib.o
+overflow                                          intr_entry.o
+packet_type_data                                  socket.o
+page_fault                                        intr_entry.o
+parse_path                                        fs.o
+phys2vmcopy                                       vmmap.o
+pktindex                                          socket.o
+pkt_send_event      0x18              socket.o
+pkt_send_event                                    socket.o
+pkttransmitter                                    socket.o
+pri_fdc             0xa               fdc.o
+pri_fdc                                           fdc.o
+print_context                                     vdisplay.o
+print_core_info                                   vmmap.o
+print_gdt                                         vmmap.o
+print_hex                                         intr_entry.o
+printk                                            vdisplay.o
+print_list                                        vmmap.o
+print_lock                                        lock.o
+print_minf_statistics                             vmmap.o
+print_p                                           vdisplay.o
+print_ramsegments                                 vmmap.o
+print_readyq                                      fdc.o
+print_tss                                         vmmap.o
+priocompute                                       timer.o
+process_ack                                       socket.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  process.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+                                                  procintr.o
+psock_send_pkt                                    socket.o
+pte_mark_busy                                     klib.o
+pte_unmark_busy                                   klib.o
+pthread_barrierattr_destroy                       pthread.o
+pthread_barrierattr_getpshared                    pthread.o
+pthread_barrierattr_init                          pthread.o
+pthread_barrierattr_setpshared                    pthread.o
+pthread_barrier_destroy                           pthread.o
+pthread_condattr_destroy                          pthread.o
+pthread_condattr_getpshared                       pthread.o
+pthread_condattr_init                             pthread.o
+pthread_condattr_setpshared                       pthread.o
+pthread_cond_timedwait                            pthread.o
+pthread_equal                                     pthread.o
+pthread_mutexattr_destroy                         pthread.o
+pthread_mutexattr_getpshared                      pthread.o
+pthread_mutexattr_init                            pthread.o
+pthread_mutexattr_setpshared                      pthread.o
+pthread_mutex_timedlock                           pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+                                                  pthread.o
+pthread_spin_destroy                              pthread.o
+pthread_spin_init                                 pthread.o
+pthread_spin_lock                                 pthread.o
+pthread_spin_trylock                              pthread.o
+pthread_spin_unlock                               pthread.o
+ptlist              0x400             vmmap.o
+ptlist                                            vmmap.o
+purge_seqno_hashtable                             socket.o
+ram_segments        0x78              vmmap.o
+ram_segments                                      vmmap.o
+rcvpkts             0x190             socket.o
+rcvpkts                                           socket.o
+read_block                                        fs.o
+read_fat12                                        fat12.o
+ready_qhead                                       process.o
+ready_qlock_owner                                 process.o
+ready_qlock                                       process.o
+ready_qtail                                       process.o
+recv_fromsock_dgram                               socket.o
+recv_fromsock_stream                              socket.o
+releasesynch_object                               lock.o
+release_vnode                                     fs.o
+remove_frames_fromtxq                             socket.o
+remove_pkt                                        socket.o
+removethread_fromsemwait                          semaphore.o
+remove_timerobj                                   timer.o
+req_drbuf_head                                    fdc.o
+req_drbuf_lock      0x1c              fdc.o
+req_drbuf_lock                                    fdc.o
+reset_drive                                       fdc.o
+restore_eflags                                    klib.o
+restore_paging                                    klib.o
+restore_proc                                      timer.o
+rlock                                             lock.o
+rlockobj_init                                     lock.o
+ *(.rodata)
+ .rodata        0x0000000000034460       0x34 timer.o
+.rodata         0x0000000000034460      0xc2c
+ .rodata        0x0000000000034494       0xa8 kbd.o
+ .rodata        0x000000000003453c      0x194 vdisplay.o
+ .rodata        0x00000000000346d0      0x457 procintr.o
+ .rodata        0x0000000000034b28      0x334 syscalls.o
+ .rodata        0x0000000000034e5c      0x1fd main.o
+ .rodata        0x000000000003505c       0x30 socket.o
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+ .rodata.str1.1
+.rodata.str1.1  0x000000000003610a      0x373
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+.rodata.str1.4  0x000000000003508c     0x107e
+rootvnode                                         fs.o
+rr_cl_enterclass                                  timer.o
+rr_cl_exitclass                                   timer.o
+rr_cl_forkret                                     timer.o
+rr_cl_fork                                        timer.o
+rr_cl_sleep                                       timer.o
+rr_cl_tick                                        timer.o
+rr_cl_wakeup                                      timer.o
+runlock                                           lock.o
+runrun                                            timer.o
+rx_q_empty          0x18              nic.o
+rx_q_empty                                        socket.o
+rx_q_head                                         nic.o
+rxq_lock            0x1c              nic.o
+rxq_lock                                          socket.o
+rx_q_tail                                         nic.o
+SCHED_CLASS_SYSTEM_FUNCS                          process.o
+scheduler                                         timer.o
+scroll_down                                       vdisplay.o
+scroll_up                                         vdisplay.o
+sdesc                                             vmmap.o
+secs                                              timer.o
+secs_to_date                                      timer.o
+segment_not_present                               intr_entry.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+                                                  semaphore.o
+semobj_init                                       semaphore.o
+semtable            0xed8             semaphore.o
+semtable_lock       0x1c              semaphore.o
+semtable_lock                                     semaphore.o
+semtable                                          semaphore.o
+send_ack                                          socket.o
+send_seqnumber_mesg                               socket.o
+set_timer_frequency                               klib.o
+setup_drive                                       fdc.o
+set_video_param                                   vdisplay.o
+simd_coprocessor_error                            intr_entry.o
+skip_atoi                                         vdisplay.o
+sock_broadcast                                    socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+                                                  socket.o
+socklist_hdr                                      socket.o
+socklist_lock       0x1c              socket.o
+socklist_lock                                     socket.o
+sock_send                                         socket.o
+socktable           0x1e78            socket.o
+socktable_lock      0x1c              socket.o
+socktable_lock                                    socket.o
+socktable                                         socket.o
+sort_hdrs                                         process.o
+sprintf                                           vdisplay.o
+spurious_interrupt_bug                            intr_entry.o
+stack_segment                                     intr_entry.o
+starttimer                                        timer.o
+sti_intr                                          klib.o
+stoptimer                                         timer.o
+strcat                                            string.o
+strchr                                            string.o
+strcmp                                            string.o
+strcpy                                            string.o
+strlen                                            string.o
+strncat                                           string.o
+strncmp                                           string.o
+strncpy                                           string.o
+strnlen                                           string.o
+strstr                                            string.o
+suspended_processes                               process.o
+suspended_proclock  0x1c              process.o
+suspended_proclock                                socket.o
+suspend                                           process.o
+Symbol                                            File
+sync_event          0x18              main.o
+sync_event                                        main.o
+syscall_accept                                    socket.o
+syscall_bind                                      socket.o
+syscall_brk                                       vmmap.o
+syscall_broadcast                                 socket.o
+syscall_chdir                                     fs.o
+syscall_chmod                                     fs.o
+syscall_closedir                                  fs.o
+syscall_close                                     fs.o
+syscall_close_socket                              socket.o
+syscall_connect                                   socket.o
+syscall_creat                                     fs.o
+syscall_dup2                                      fs.o
+syscall_dup                                       fs.o
+sys_call_entry                                    intr_entry.o
+syscall_exectask                                  process.o
+sys_call_exit                                     intr_entry.o
+syscall_exit                                      process.o
+syscall_fchdir                                    fs.o
+syscall_getchare                                  kbd.o
+syscall_getcharf                                  fs.o
+syscall_getchar                                   kbd.o
+syscall_getpids                                   process.o
+syscall_getprocinfo                               process.o
+syscall_getscanchar                               kbd.o
+syscall_gettsc                                    timer.o
+syscall_kill                                      process.o
+syscall_listen                                    socket.o
+syscall_lseek                                     fs.o
+syscall_machid                                    nic.o
+syscall_mkdir                                     fs.o
+syscall_notimplemented                            syscalls.o
+syscall_opendir                                   fs.o
+syscall_open                                      fs.o
+syscall_pageinfo                                  process.o
+syscall_prifree                                   vmmap.o
+syscall_primalloc                                 vmmap.o
+syscall_pthread_barrier_init                      pthread.o
+syscall_pthread_barrier_wait                      pthread.o
+syscall_pthread_cond_broadcast                    pthread.o
+syscall_pthread_cond_destroy                      pthread.o
+syscall_pthread_cond_init                         pthread.o
+syscall_pthread_cond_signal                       pthread.o
+syscall_pthread_cond_wait                         pthread.o
+syscall_pthread_create                            pthread.o
+syscall_pthread_detach                            pthread.o
+syscall_pthread_exit                              pthread.o
+syscall_pthread_join                              pthread.o
+syscall_pthread_mutex_destroy                     pthread.o
+syscall_pthread_mutex_init                        pthread.o
+syscall_pthread_mutex_lock                        pthread.o
+syscall_pthread_mutex_trylock                     pthread.o
+syscall_pthread_mutex_unlock                      pthread.o
+syscall_pthread_self                              pthread.o
+syscall_pthread_yield                             pthread.o
+syscall_ptime                                     timer.o
+syscall_putchar                                   vdisplay.o
+syscall_puts                                      vdisplay.o
+syscall_readblocks                                fs.o
+syscall_readdir                                   fs.o
+syscall_read                                      fs.o
+syscall_recvfrom                                  socket.o
+syscall_recv                                      socket.o
+syscall_rename                                    fs.o
+syscall_rewinddir                                 fs.o
+syscall_rmdir                                     fs.o
+syscall_seekdir                                   fs.o
+syscall_sem_close                                 semaphore.o
+syscall_sem_destroy                               semaphore.o
+syscall_sem_getvalue                              semaphore.o
+syscall_sem_init                                  semaphore.o
+syscall_sem_open                                  semaphore.o
+syscall_sem_post                                  semaphore.o
+syscall_sem_timedwait                             semaphore.o
+syscall_sem_trywait                               semaphore.o
+syscall_sem_unlink                                semaphore.o
+syscall_sem_wait                                  semaphore.o
+syscall_send                                      socket.o
+syscall_sendto                                    socket.o
+syscall_setcursor                                 vdisplay.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+                                                  syscalls.o
+syscall_socket                                    socket.o
+syscall_stat                                      fs.o
+syscall_sync                                      fat12.o
+syscall_telldir                                   fs.o
+syscall_test                                      syscalls.o
+syscall_time                                      timer.o
+syscall_trecvfrom                                 socket.o
+syscall_tsendto                                   socket.o
+syscall_tsleep                                    timer.o
+syscall_twakeup                                   timer.o
+syscall_ungetcharf                                fs.o
+syscall_unlink                                    fs.o
+syscall_wait                                      process.o
+syscall_writeblocks                               fs.o
+syscall_write                                     fs.o
+sys_event_wakeup                                  lock.o
+sysproc_datareg     0x30              process.o
+sysproc_datareg                                   process.o
+sysproc_datasegment
+sysproc_datasegment                               process.o
+sysproc_fileinfo    0x74              process.o
+sysproc_fileinfo                                  process.o
+sysproc_inputinfo   0x238             process.o
+sysproc_inputinfo                                 process.o
+sysproc_outputinfo  0xfcc             process.o
+sysproc_outputinfo                                process.o
+sysproc_vm          0x24              process.o
+sysproc_vm                                        process.o
+systemcall                                        syscalls.o
+system_process      0x118             process.o
+system_process                                    nic.o
+sys_unlock                                        lock.o
+temp_proc_map                                     socket.o
+terminated_threads                                process.o
+terminatehandler_event
+terminatehandler_event                            process.o
+terminate_initialize_system_thread                process.o
+terminate_process                                 process.o
+terminate_thread                                  process.o
+termthr_lock        0x1c              process.o
+termthr_lock                                      process.o
+test_and_set_bitn                                 klib.o
+test_and_set                                      klib.o
+ *(.text)
+.text           0x0000000000010800    0x23c53
+ .text          0x0000000000010800       0xcd initboot.o
+ .text          0x00000000000108d0      0xbb2 intr_entry.o
+ .text          0x0000000000011490     0x113b timer.o
+ .text          0x00000000000125d0      0xeb1 kbd.o
+ .text          0x0000000000013490      0x4a6 string.o
+ .text          0x0000000000013940     0x1aa9 vdisplay.o
+ .text          0x00000000000153f0      0x2fa klib.o
+ .text          0x00000000000156f0     0x4c3a fs.o
+ .text          0x000000000001a330     0x2da3 fat12.o
+ .text          0x000000000001d0e0     0x126f lock.o
+ .text          0x000000000001e350      0x79d procintr.o
+ .text          0x000000000001eaf0      0xebd syscalls.o
+ .text          0x000000000001f9b0      0xa3e main.o
+ .text          0x00000000000203f0     0x48df process.o
+ .text          0x0000000000024cd0     0x355e fdc.o
+ .text          0x0000000000028230     0x18e7 nic.o
+ .text          0x0000000000029b20     0x3e45 vmmap.o
+ .text          0x000000000002d970      0xf23 semaphore.o
+ .text          0x000000000002e8a0     0x5380 socket.o
+ .text          0x0000000000033c20      0x833 pthread.o
+this_hostid         0x2               nic.o
+this_hostid                                       socket.o
+this_hwaddr                                       nic.o
+thread_exit                                       process.o
+thread_terminate_handler                          process.o
+timed_event_thread                                timer.o
+timeoutflag                                       timer.o
+timer_handler                                     timer.o
+timer_intr_thread   0x4               timer.o
+timer_intr_thread                                 timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+                                                  timer.o
+timerobj_init                                     timer.o
+timerq_lock         0x1c              timer.o
+timerq_lock                                       semaphore.o
+timers                                            timer.o
+timerthread                                       timer.o
+timerthr_sleep      0x18              timer.o
+timerthr_sleep                                    timer.o
+tolower                                           string.o
+toupper                                           string.o
+trans               0x4               socket.o
+trans                                             socket.o
+trecvfrom_internal                                socket.o
+trylock                                           lock.o
+tss_table           0x6800            process.o
+tsstable_lock       0x1c              process.o
+tsstable_lock                                     process.o
+tss_table                                         process.o
+ttt                 0x4               kbd.o
+ttt                                               kbd.o
+tx_q_head                                         nic.o
+txq_lock            0x1c              nic.o
+txq_lock                                          socket.o
+tx_q_tail                                         nic.o
+tx_wait_pkt                                       nic.o
+unlock                                            lock.o
+unlock_page                                       vmmap.o
+unusedproc_count                                  process.o
+unused_processes                                  process.o
+unused_proclock     0x1c              process.o
+unused_proclock                                   process.o
+unusedthr_count                                   process.o
+unused_threadlock   0x1c              process.o
+unused_threadlock                                 process.o
+unused_threads                                    process.o
+used_processes                                    process.o
+used_proclock       0x1c              process.o
+used_proclock                                     socket.o
+used_threadlock     0x1c              process.o
+used_threadlock                                   process.o
+used_threads                                      process.o
+valid_handle                                      fs.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+                                                  vdisplay.o
+vfs_list                                          fs.o
+vm2physcopy                                       vmmap.o
+vm2vmcopy                                         vmmap.o
+vm_addregion                                      vmmap.o
+vm_attachmemsegment                               vmmap.o
+vm_createvm                                       vmmap.o
+vm_delregionend                                   vmmap.o
+vm_delregion                                      vmmap.o
+vm_destroy                                        vmmap.o
+vm_detachmemsegment                               vmmap.o
+vm_expanddownregion                               vmmap.o
+vm_expandregion                                   vmmap.o
+vm_getaccesslist                                  vmmap.o
+vm_getattr                                        vmmap.o
+vm_getdirtylist                                   vmmap.o
+vm_getmemsegment                                  vmmap.o
+vm_getpdentry                                     vmmap.o
+vm_getptentry                                     vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+                                                  vmmap.o
+vm_releasesegment                                 vmmap.o
+vm_setattr                                        vmmap.o
+vm_shrinkregion                                   vmmap.o
+vnhashlist_lock                                   fs.o
+vnhashlist_lock_owner                             fs.o
+vnlist_hdr          0x4c              fs.o
+vnlist_hdr                                        fs.o
+vnlist_lock         0x1c              fs.o
+vnlist_lock                                       fat12.o
+vnode_add_hashlist                                fs.o
+vnode_del_hashlist                                fs.o
+vsprintf                                          vdisplay.o
+wakeup                                            process.o
+write_block                                       fs.o
+write_fat12                                       fat12.o
+write_queue_lock    0x1c              fs.o
+write_queue_lock                                  fs.o
+X                                                 vdisplay.o
+Y                                                 vdisplay.o

@@ -1,0 +1,1307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Bochs User Manual</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="NEXT"
+TITLE="Introduction to Bochs"
+HREF="c26.html"></HEAD
+><BODY
+CLASS="BOOK"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="BOOK"
+><A
+NAME="AEN1"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN2"
+>Bochs User Manual</A
+></H1
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN5"
+></A
+>Kevin Lawton</H3
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN8"
+></A
+>Bryce Denney</H3
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN11"
+></A
+>N. David Guarneri</H3
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN14"
+></A
+>Volker Ruppert</H3
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN17"
+></A
+>Christophe Bothamy</H3
+><H4
+CLASS="EDITEDBY"
+>Edited by</H4
+><H3
+CLASS="EDITOR"
+>Michael Calabrese</H3
+><H3
+CLASS="EDITOR"
+>Stanislav Shwartsman</H3
+><HR></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="c26.html"
+>Introduction to Bochs</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c26.html#WHATISBOCHS"
+>What is Bochs?</A
+></DT
+><DT
+><A
+HREF="x44.html"
+>Who uses Bochs?</A
+></DT
+><DT
+><A
+HREF="x51.html"
+>Is Bochs right for me?</A
+></DT
+><DT
+><A
+HREF="x58.html"
+>Will it work for me?</A
+></DT
+><DT
+><A
+HREF="x65.html"
+>Bochs License</A
+></DT
+><DT
+><A
+HREF="x76.html"
+>Third Party Software Licensing and Temporary Files</A
+></DT
+><DT
+><A
+HREF="x80.html"
+>Features</A
+></DT
+><DT
+><A
+HREF="x230.html"
+>Supported Platforms</A
+></DT
+><DT
+><A
+HREF="x280.html"
+>FAQ</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c370.html"
+>Release Notes</A
+></DT
+><DT
+><A
+HREF="c375.html"
+>Installation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c375.html#DOWNLOADING"
+>Downloading Bochs</A
+></DT
+><DT
+><A
+HREF="x399.html"
+>Tracking the source code with CVS</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x399.html#AEN405"
+>Checking out Bochs</A
+></DT
+><DT
+><A
+HREF="x399.html#AEN435"
+>Getting the Latest Version</A
+></DT
+><DT
+><A
+HREF="x399.html#CVS-RELEASE-VERSION"
+>Getting a Release Version</A
+></DT
+><DT
+><A
+HREF="x399.html#AEN561"
+>More about CVS</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x571.html"
+>Installing a Binary</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x571.html#AEN574"
+>Windows</A
+></DT
+><DT
+><A
+HREF="x571.html#LINUXRPM"
+>Linux RPM</A
+></DT
+><DT
+><A
+HREF="x571.html#MACOSXDMG"
+>MacOS X DMG</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x803.html"
+>Compiling Bochs</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x803.html#AEN805"
+>Standard Compile</A
+></DT
+><DT
+><A
+HREF="x803.html#CONFIG-OPTS"
+>Configure Options</A
+></DT
+><DT
+><A
+HREF="x803.html#AEN1231"
+>Transcript of Successful Compilation</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILING-WIN32"
+>Compiling on Win32 with Microsoft VC++</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-CYGWIN"
+>Compiling on Win32 with Cygwin</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-MACOS9-CODEWARRIOR"
+>Compiling on MacOS 9 with CodeWarrior</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-MACOSX"
+>Compiling on MacOS X</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-BEOS"
+>Compiling on BeOS</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-MORPHOS"
+>Compiling on Amiga/MorphOS</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-RFB"
+>Compiling with the RFB interface</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-SDL"
+>Compiling with the SDL interface</A
+></DT
+><DT
+><A
+HREF="x803.html#COMPILE-WX"
+>Compiling with the wxWidgets interface</A
+></DT
+><DT
+><A
+HREF="x803.html#AEN1349"
+>Building an RPM on Linux</A
+></DT
+><DT
+><A
+HREF="x803.html#AEN1358"
+>Compile Problems</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="c1364.html"
+>Setup</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c1364.html#AEN1366"
+>What does Bochs need?</A
+></DT
+><DT
+><A
+HREF="x1407.html"
+>bochsrc</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-MEGS"
+>megs</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-CPU"
+>cpu</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1490"
+>romimage</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1495"
+>optromimage1, optromimage2, optromimage3 or optromimage4</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-VGAROMIMAGE"
+>vgaromimage</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-VGA"
+>vga</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-FLOPPYAB"
+>floppya/floppyb</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-ATA"
+>ata0, ata1, ata2, ata3</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-ATA-MASTER-SLAVE"
+>ata0-master, ata0-slave, ata1-*, ata2-*, ata3-*</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-BOOT"
+>boot</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1634"
+>floppy_bootsig_check</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-CONFIGINTERFACE"
+>config_interface</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-DISPLAYLIBRARY"
+>display_library</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-LOG"
+>log</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1707"
+>logprefix</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-DEBUG-INFO-ERROR-PANIC"
+>debug/info/error/panic</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1720"
+>debugger_log</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-COM"
+>com[1-4]</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1731"
+>parport[1-2]</A
+></DT
+><DT
+><A
+HREF="x1407.html#SB16LINE"
+>sb16</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1763"
+>vga_update_interval</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1769"
+>keyboard_serial_delay</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1773"
+>keyboard_paste_delay</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1777"
+>ips</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-CLOCK"
+>clock</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-MOUSE"
+>mouse</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-PRIVATE-COLORMAP"
+>private_colormap</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1808"
+>i440fxsupport</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1812"
+>pcidev</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-USB1"
+>usb1</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-GDBSTUB"
+>gdbstub</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1838"
+>ne2k</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1911"
+>keyboard_mapping</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1915"
+>keyboard_type</A
+></DT
+><DT
+><A
+HREF="x1407.html#BOCHSOPT-USER-SHORTCUT"
+>user_shortcut</A
+></DT
+><DT
+><A
+HREF="x1407.html#AEN1926"
+>cmosimage</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x1931.html"
+>Sound Blaster 16 Emulation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x1931.html#AEN1940"
+>How well does it work?</A
+></DT
+><DT
+><A
+HREF="x1931.html#AEN1945"
+>Output to a sound card</A
+></DT
+><DT
+><A
+HREF="x1931.html#AEN1952"
+>Installation on Linux</A
+></DT
+><DT
+><A
+HREF="x1931.html#AEN2025"
+>Features planned for the future</A
+></DT
+><DT
+><A
+HREF="x1931.html#AEN2032"
+>Description of the sound output classes</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2036.html"
+>How to write your own keymap table</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c2419.html"
+>Using Bochs</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c2419.html#COMMANDLINE"
+>Command line arguments</A
+></DT
+><DT
+><A
+HREF="x2455.html"
+>Search order for the configuration file</A
+></DT
+><DT
+><A
+HREF="x2478.html"
+>The configuration interface 'textconfig'</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2478.html#AEN2489"
+>The start menu</A
+></DT
+><DT
+><A
+HREF="x2478.html#HEADERBAR"
+>The Bochs headerbar</A
+></DT
+><DT
+><A
+HREF="x2478.html#AEN2537"
+>The runtime configuration</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2542.html"
+>Save and restore simulation</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c2549.html"
+>Common problems and what to do about them (Troubleshooting)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c2549.html#AEN2554"
+>Bochs panics! What can I do?</A
+></DT
+><DT
+><A
+HREF="x2600.html"
+>Mouse behavior, enabling and disabling</A
+></DT
+><DT
+><A
+HREF="x2606.html"
+>Text-mode is broken in some ancient DOS program</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c2614.html"
+>Mailing Lists</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c2614.html#BOCHS-DEVELOPERS"
+>bochs-developers mailing list</A
+></DT
+><DT
+><A
+HREF="x2631.html"
+>bochs-announce mailing list</A
+></DT
+><DT
+><A
+HREF="x2643.html"
+>bochs-cvs mailing list</A
+></DT
+><DT
+><A
+HREF="x2648.html"
+>Mailing List Etiquette</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c2668.html"
+>Tips and Techniques</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c2668.html#DISKIMAGEHOWTO"
+>How to make a simple disk image</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c2668.html#AEN2685"
+>Create a flat image</A
+></DT
+><DT
+><A
+HREF="c2668.html#AEN2720"
+>Partition and format your image file</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2757.html"
+>Use mtools to manipulate disk images</A
+></DT
+><DT
+><A
+HREF="x2762.html"
+>Bochs GNU/Linux DiskTools</A
+></DT
+><DT
+><A
+HREF="x2766.html"
+>Win32 only: Tools to manipulate disk images</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2766.html#AEN2768"
+>Winimage</A
+></DT
+><DT
+><A
+HREF="x2766.html#AEN2774"
+>DiskExplorer</A
+></DT
+><DT
+><A
+HREF="x2766.html#AEN2780"
+>Ben Lunt's MTOOLs for Bochs and Win32 and/or DOS</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2805.html"
+>X Windows: Color allocation problems</A
+></DT
+><DT
+><A
+HREF="x2810.html"
+>Screen saver turns on too quickly</A
+></DT
+><DT
+><A
+HREF="x2818.html"
+>Mounting a disk image using the loop device</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2818.html#AEN2821"
+>...on Linux</A
+></DT
+><DT
+><A
+HREF="x2818.html#AEN2825"
+>...on FreeBSD</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2850.html"
+>Simulating a Symmetric Multiprocessor (SMP) Machine</A
+></DT
+><DT
+><A
+HREF="x2879.html"
+>Setting Up Networking in DLX Linux</A
+></DT
+><DT
+><A
+HREF="x2911.html"
+>Configuring and using a tuntap network interface</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2911.html#AEN2924"
+>Tuntap description</A
+></DT
+><DT
+><A
+HREF="x2911.html#AEN2929"
+>Set up the linux Kernel
+        <A
+NAME="AEN2931"
+HREF="#FTN.AEN2931"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="x2911.html#AEN2953"
+>Configure Bochs to use the tuntap interface</A
+></DT
+><DT
+><A
+HREF="x2911.html#AEN2965"
+>Set up the private network between the host and the guest</A
+></DT
+><DT
+><A
+HREF="x2911.html#AEN2981"
+>Set up the host to masquerade the guest network accesses</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x2994.html"
+>Using Bochs internal debugger</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2994.html#AEN3007"
+>Execution Control</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3011"
+>BreakPoints</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3015"
+>Manipulating Memory</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3019"
+>Info commands</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3023"
+>Manipulating CPU Registers</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3027"
+>Disassembly commands</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3031"
+>Instruction tracing</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3035"
+>Instrumentation</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3040"
+>Instrumentation commands</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3044"
+>Other Commands</A
+></DT
+><DT
+><A
+HREF="x2994.html#AEN3088"
+>Related links</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3097.html"
+>Using Bochs and the remote GDB stub</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3097.html#AEN3100"
+>Configuring Bochs</A
+></DT
+><DT
+><A
+HREF="x3097.html#AEN3105"
+>Running Bochs</A
+></DT
+><DT
+><A
+HREF="x3097.html#AEN3110"
+>Running GDB</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3115.html"
+>Using the serial port</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3115.html#AEN3121"
+>Logging serial port output to a file</A
+></DT
+><DT
+><A
+HREF="x3115.html#AEN3128"
+>Interactivity : connecting to a virtual terminal</A
+></DT
+><DT
+><A
+HREF="x3115.html#AEN3139"
+>Interactivity : connecting to a pseudo terminal</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3147.html"
+>BIOS Tips</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3147.html#AEN3149"
+>Booting from CD-ROMs</A
+></DT
+><DT
+><A
+HREF="x3147.html#BIOS-DISK-TRANSLATION"
+>Disk translation</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3272.html"
+>How to enter special key combination</A
+></DT
+><DT
+><A
+HREF="x3289.html"
+>Notes about VESA usage</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3289.html#AEN3317"
+>Instructions to setup Bochs VBE in Windows Guest OS</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3326.html"
+>Notes about Cirrus SVGA usage</A
+></DT
+><DT
+><A
+HREF="x3340.html"
+>Disk Image Modes</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3340.html#HARDDISK-MODE-FLAT"
+>flat</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3427"
+>concat</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3449"
+>external/dll</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3455"
+>sparse</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3517"
+>vmware3</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3539"
+>undoable</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3592"
+>growing</A
+></DT
+><DT
+><A
+HREF="x3340.html#AEN3617"
+>volatile</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3662.html"
+>Using the bximage tool</A
+></DT
+><DT
+><A
+HREF="x3669.html"
+>Using the bxcommit tool</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="c3676.html"
+>Guest operating systems</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="c3676.html#GUEST-LINUX"
+>Linux</A
+></DT
+><DT
+><A
+HREF="x3683.html"
+>Knoppix</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3683.html#AEN3686"
+>Getting Knoppix</A
+></DT
+><DT
+><A
+HREF="x3683.html#AEN3691"
+>Preparing Bochs</A
+></DT
+><DT
+><A
+HREF="x3683.html#AEN3697"
+>Using Knoppix</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3703.html"
+>Minix</A
+></DT
+><DT
+><A
+HREF="x3707.html"
+>OpenBSD</A
+></DT
+><DT
+><A
+HREF="x3710.html"
+>FreeBSD 5.2.1</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3710.html#AEN3714"
+>Getting FreeBSD</A
+></DT
+><DT
+><A
+HREF="x3710.html#AEN3719"
+>Preparing Bochs</A
+></DT
+><DT
+><A
+HREF="x3710.html#AEN3726"
+>Installing FreeBSD</A
+></DT
+><DT
+><A
+HREF="x3710.html#AEN3749"
+>Post-installation configuration</A
+></DT
+><DT
+><A
+HREF="x3710.html#AEN3755"
+>Using FreeBSD</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3763.html"
+>FreeDOS Beta 8</A
+></DT
+><DT
+><A
+HREF="x3767.html"
+>GNU (Also known as GNU/Hurd)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3767.html#AEN3769"
+>Installing GNU</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3862.html"
+>DOS</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3862.html#AEN3866"
+>Accessing your CDROM</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3883.html"
+>Windows 95</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3883.html#AEN3890"
+>How to Install Windows 95 with floppies</A
+></DT
+><DT
+><A
+HREF="x3883.html#AEN3978"
+>Installing a Japanese version of Windows 95</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3982.html"
+>Windows NT 4.0</A
+></DT
+><DT
+><A
+HREF="x3994.html"
+>Windows 98</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3994.html#WIN98METHOD1"
+>Windows 98 Method 1: mcopy Windows 98 into Hard Disk Image (Linux Host)</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4030"
+>Locating Your Partitions</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4041"
+>Cleaning Up Your MS Windows Partition</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4103"
+>Mounting Your Windows Partition</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4112"
+>Choosing the Size of Your Disk Image</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4127"
+>Setting Up the Disk Image</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4135"
+>Create the .bochsrc Configuration File</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4140"
+>Make Hard Disk Image Acessible by Mtools</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4157"
+>Format Partition and Copy Files</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4171"
+>The Fun Begins</A
+></DT
+><DT
+><A
+HREF="x3994.html#WIN98METHOD2"
+>Windows 98 Method 2: Classic Install (Linux Host)</A
+></DT
+><DT
+><A
+HREF="x3994.html#MAKEWIN98IMAGE"
+>Saving Your Windows 98 CD as a Disk
+Image</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4213"
+>Making the Windows 98 Hard Disk Image</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4225"
+>Create the .bochsrc Configuration File</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4230"
+>Create the Primary DOS Partition and set it Active</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4257"
+>Formatting the Disk Image</A
+></DT
+><DT
+><A
+HREF="x3994.html#AEN4266"
+>Starting the Installation</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x4289.html"
+>Windows ME</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x4289.html#AEN4292"
+>Installing Windows ME</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x4299.html"
+>Windows 2000</A
+></DT
+><DT
+><A
+HREF="x4304.html"
+>Windows 2000 Server</A
+></DT
+><DT
+><A
+HREF="x4308.html"
+>Windows XP</A
+></DT
+><DT
+><A
+HREF="x4313.html"
+>SCO OpenServer 5.0.5</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c26.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Introduction to Bochs</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

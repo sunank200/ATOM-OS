@@ -1,0 +1,13 @@
+sysdata.asm - No change
+pmswitch.asm - No change
+
+initboot.asm :
+ 1) Change context switch to take into consisderation of multiple tasks.
+    No need of explicit saving and restoring of any regs.
+ 2)
+
+
+1. Change the kthread strcuture to point to TSS
+2. Change Interrupt gates to task gates.(for IRQs)
+3. Define new kthread and process structures
+

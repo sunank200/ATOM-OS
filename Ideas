@@ -1,0 +1,15 @@
+keyboard driver, nic driver can be implemented as separate tasks. 
+Key board driver can go for sleep also, but will be for a short period usually.
+spinlock is used along with other synchronization tools such as lock, 
+recursive lock, and event objects. Spinlock is also used to maintain list 
+of owned synchronization objects of a thread. No where else spinlock should 
+be used.
+
+When a thread is being terminated and another is waking up the same thread
+there is a conflict about finding the thread on the sleep channel. The 
+terminator should test the sleep channel in non-blocking way. if it fails to 
+test the sleep channel or if it cannnot find the thread on the sleep channel, 
+then it should restart the termination again. 
+The waking up thread during waking time, unsets the sleep channel for the 
+target thread at that time uses the spinlock.
+

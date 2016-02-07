@@ -1,0 +1,29 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x01000000                . = 0x1000000
+
+.text           0x01000000       0x10
+                0x01000000        0x4 LONG 0x47b8
+                0x01000004        0x4 LONG 0x81e38900
+                0x01000008        0x4 LONG 0x4c3
+                0x0100000c        0x4 LONG 0x30cd00
+ *(.text)
+ *(.fixup)
+ *(.kstrtab)
+ *(.rodata)
+                0x08000000                . = 0x8000000
+
+.data
+ *(.data)
+
+.bss
+ *(.bss)
+ *(COMMON)
+LOAD ../base/lib.a
+OUTPUT(.o elf32-i386)

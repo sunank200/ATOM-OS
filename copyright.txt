@@ -1,0 +1,19 @@
+/////////////////////////////////////////////////////////////////////
+// Copyright (C) 2008 Department of Computer SCience & Engineering
+// National Institute of Technology - Warangal
+// Andhra Pradesh 
+// INDIA
+// http://www.nitw.ac.in
+//
+// This software is developed for software based DSM system Project
+// This is an experimental platform, freely useable and modifiable
+// 
+//
+// Team Members:
+// Prof. T. Ramesh 			Chapram Sudhakar
+// A. Sundara Ramesh  			T. Santhosi
+// K. Suresh 				G. Konda Reddy
+// Vivek Kumar 				T. Vijaya Laxmi
+// Angad 				Jhahnavi
+//////////////////////////////////////////////////////////////////////
+

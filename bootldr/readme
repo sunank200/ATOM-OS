@@ -1,0 +1,8 @@
+For creating a boot disk:
+1. Format the disk using dos-format program.
+   ( Do not create using linux mkdosfs.)
+2. Assemble boot.asm using nasm.
+3. Use dd command write the generated boot loader into floppy disk.
+4. Copy the image (os), shell files into the boot floppy.
+
+

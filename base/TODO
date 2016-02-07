@@ -1,0 +1,84 @@
+
+Maintain separte locks for each of the mc queues.
+Remove locking functionality from the consistency models.
+Do the removing of requests by the servicing threads only.
+For enqueing functionality use two locks simultaneously.
+
+---------------------------
+
+invalidation request --> while this is owner send negative response
+  ,,		     --> While pending request for ownership automatically it waits for page lock
+ ,,		     --> Otherwise grant
+
+Associate request ids and corresponding replies. If old replies are received dromp them.
+(reqid, from thr, from proc) can uniquely identify a request.
+
+---------------------------
+Separate lock, event and other synchobjects spinlock feature 
+and queue manipulation features. So that where ever required separate 
+spin locking and spin unlocking and queue manipulation can be done.
+
+Check in all structures for fields that need to be declared as volatile.
+
+---------------------------------------------
+Add additional field appseqno to packet_header and corresponding
+other structures. Then modify sock_send, trecvfrom_internal ...
+
+Also check the lazy rc and weak consistency models.
+Test primalloc call and brk call
+in LockAcquire wait for the frames to be assembled also.
+Check and associate the message request numbers and corresponding replies in lrc
+While exiting in LRC the process must generate a boradcast message indicating 
+the change of probable owner for its pages as homemachine.
+Eliminate the use of mcmanager_local and change enqueue_localmcmessage to 
+transfer the message directly and if necessary queue it in the reply 
+awaiting queue then sleep.
+Uploading time others record same owner and two or more will get same value from
+old page holder. So broadcasting is required, so that every body knows about the change of ownership.
+// Check for mcLockPage deadlock situation or one sleeping by holding that page
+// Check for deadlock in termination/creation of a thread or simultaneous 
+// termination of threads.
+---------------------------------------------
+
+Add execm to support mpi processes creation as threads, disabling all dsm functions by substituting with all dummy interface functions. The major difference is 
+to create data segment as well in all threads.
+
+Select some example mpi problems from the document and compile into this.
+
+Combine rexec server for mpi and other normal processes under one type of request.
+Check syscall_broadcast to verify how it is transferring locally.
+
+Send always in the place of comm to othermachines, its groupid. On receiving side translate that into comm whenever possible or necessary.
+
+
+During comm_world call, initialize the global barrier directly with 
+member count as the barrier count and make a call to barrier, so that this 
+call waits for all processes starting.
+
+comm_split: examine and do splitting only on one server then respond back to 
+others, others can now create the required group. Take into consideration
+different combinations of key and color values.
+-------------------------------
+vm_expanddownregion is not working prooperly for stack
+
+As frames are being transmitted until it is successfully identified, we must check for duplicate frames. (At frame level). With simple sequence numbering method for each machine.
+Process or thread creation time must ensure all the data and data structures must be initialized properly.
+
+-----------------------------------
+Modification of pthread.c to include additional functionality required for
+OpenMP ... lockserver.c also
+Modification of library.c for completing some of the dummy functions required
+for OpenMP,, getenv(), abort() etc.
+Modification of string.c to include additional functions
+
+18/09/2010:
+1.	optimize event_wakeup by check the waiting queue and then call.
+2.	optimize disable-paging, vmcopy or bcopy, re-enable paging, by simple 
+	bcopy, beacuse as it is executed on behalf of process at which time 
+	paging is enabled and automatically bcopy works.
+3.	Change internal handle nos of stdin, stdout, stderr to -1, -2, -3 and 
+	unused handle nos as -4
+4.	provide a read equivalent in kbd.c
+5.	Make sure that spinlock and spinunlock must be used inside
+	CLI and STI only.
+

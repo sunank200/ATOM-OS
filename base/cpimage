@@ -1,0 +1,57 @@
+#!/bin/bash
+curdir=`pwd`
+echo "Making IMAGE"
+make
+
+if [ $? -ne 0 ]
+then
+	echo "Error while making IMAGE"
+	exit
+fi
+
+# cd /root/spl_mod/splash2_changed/codes
+# ./mkall.sh
+
+cd $curdir
+cd ../samples
+make
+
+cd ../base
+
+./cpfile IMAGE IMAGE
+./cpfile shell shell
+./cpfile ../samples/quiksort quiksort
+./cpfile ../samples/reduct reduct
+./cpfile ../samples/matmult matmult
+./cpfile ../samples/seive seive
+./cpfile ../samples/seive2 seive2
+./cpfile ../samples/merge smerg
+./cpfile ../samples/tsp tsp
+./cpfile ../samples/tsp2 tsp2
+
+cp fimage /root/dos1
+cp fimage /root/dos2
+cp fimage /root/dos3
+cp fimage /root/dos4
+cp fimage /root/dos5
+cp fimage /root/dos6
+cp fimage /root/dos7
+cp fimage /root/dos8
+cp fimage /root/dos9
+cp fimage /root/dos10
+cp fimage /root/dos11
+cp fimage /root/dos12
+cp fimage /root/dos13
+cp fimage /root/dos14
+cp fimage /root/dos15
+cp fimage /root/dos16
+
+cp fimage /root/fed1
+cp fimage /root/fed2
+cp fimage /root/fed3
+cp fimage /root/fed4
+cp fimage /root/fed5
+cp fimage /root/fed6
+cp fimage /root/fed7
+cp fimage /root/fed8
+

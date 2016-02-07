@@ -1,0 +1,120 @@
+make -C ../imgcreate
+make[1]: Entering directory `/root/Project/pack/imgcreate'
+gcc -Wall -Wstrict-prototypes -march=i686 -fomit-frame-pointer -fno-strict-aliasing -c -o main.o main.c
+gcc -Wall -Wstrict-prototypes -march=i686 -fomit-frame-pointer -fno-strict-aliasing -c -o buffers.o buffers.c
+gcc -Wall -Wstrict-prototypes -march=i686 -fomit-frame-pointer -fno-strict-aliasing -c -o datetime.o datetime.c
+gcc -Wall -Wstrict-prototypes -march=i686 -fomit-frame-pointer -fno-strict-aliasing -c -o fs.o fs.c
+gcc -Wall -Wstrict-prototypes -march=i686 -fomit-frame-pointer -fno-strict-aliasing -c -o fscalls.o fscalls.c
+gcc -o cpfile main.o buffers.o datetime.o fs.o fscalls.o 
+cp	cpfile	../base/
+make[1]: Leaving directory `/root/Project/pack/imgcreate'
+make -C ../lib 
+make[1]: Entering directory `/root/Project/pack/lib'
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o datetime.o datetime.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o drand48.o drand48.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o getopt.o getopt.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o input.o input.c
+nasm -f elf -o klib.o klib.asm
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o library.o library.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o malloc.o malloc.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o scanf1.o scanf1.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o string.o string.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o strtod.o strtod.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o syscallwrap.o syscallwrap.c
+nasm -f elf -o syscallib.o syscallib.asm
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o vsprintf.o vsprintf.c
+nasm -f elf -o pow.o pow.asm
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o mathfunc.o mathfunc.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o strtol.o strtol.c
+ar cr lib.a datetime.o drand48.o getopt.o input.o klib.o library.o malloc.o scanf1.o string.o strtod.o syscallwrap.o syscallib.o vsprintf.o pow.o mathfunc.o strtol.o 
+make[1]: Leaving directory `/root/Project/pack/lib'
+make -C ../samples
+make[1]: Entering directory `/root/Project/pack/samples'
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 seive.c
+In file included from ../include/syscalls.h:13,
+                 from seive.c:3:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map seive.map -o seive seive.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 reduct.c
+In file included from ../include/syscalls.h:13,
+                 from reduct.c:2:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map reduct.map -o reduct reduct.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 merge.c
+In file included from ../include/syscalls.h:13,
+                 from merge.c:3:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map merge.map -o merge merge.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 quiksort.c
+In file included from ../include/syscalls.h:13,
+                 from quiksort.c:3:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map quiksort.map -o quiksort quiksort.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 tsp.c
+In file included from ../include/syscalls.h:13,
+                 from tsp.c:4:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map tsp.map -o tsp tsp.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 tsp2.c
+In file included from ../include/syscalls.h:13,
+                 from tsp2.c:4:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map tsp2.map -o tsp2 tsp2.o ../lib/lib.a
+gcc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32 matmult.c
+In file included from ../include/syscalls.h:13,
+                 from matmult.c:4:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+ld -T userproc.lds -Map matmult.map -o matmult matmult.o ../lib/lib.a
+cc -I ../include -I /root/mpichinstall/include -c -march=i586 -mpc32   -c -o seive2.o seive2.c
+In file included from ../include/syscalls.h:13,
+                 from seive2.c:3:
+../include/olib.h:18: warning: conflicting types for built-in function ‘sqrt’
+../include/olib.h:52: warning: conflicting types for built-in function ‘putchar’
+seive2.c: In function ‘strike_factors’:
+seive2.c:27: warning: incompatible implicit declaration of built-in function ‘malloc’
+ld -T userproc.lds -Map seive2.map -o seive2 seive2.o ../lib/lib.a
+make[1]: Leaving directory `/root/Project/pack/samples'
+nasm -f elf -o initboot.o initboot.asm
+nasm -f elf -o intr_entry.o intr_entry.asm
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o timer.o timer.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o kbd.o kbd.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -O3 -c -o string.o string.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o vdisplay.o vdisplay.c
+nasm -f elf -o klib.o klib.asm
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o fs.o fs.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o fat12.o fat12.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o lock.o lock.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o procintr.o procintr.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o syscalls.o syscalls.c
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o main.o main.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -fno-builtin-bzero -fno-builtin-strncmp -c -o process.o process.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o fdc.o fdc.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o nic.o nic.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o vmmap.o vmmap.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o semaphore.o semaphore.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -c -o socket.o socket.c
+gcc -I ../include -O4 -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc -fno-builtin-bzero -fno-builtin-strncmp -c -o pthread.o pthread.c
+ld -T mkernel.lds -e _main -o kernel -Map mkern.map --cref -static intr_entry.o timer.o kbd.o string.o \
+	vdisplay.o klib.o fs.o fat12.o lock.o procintr.o syscalls.o main.o \
+	process.o fdc.o nic.o vmmap.o semaphore.o socket.o pthread.o
+sort -k 17 mkern.map > mkern.sort
+nasm -f bin -o pmswitch.o pmswitch.asm
+dd if=pmswitch.o of=pmswitch1k bs=1024 conv=sync
+0+1 records in
+1+0 records out
+1024 bytes (1.0 kB) copied, 6.132e-05 s, 16.7 MB/s
+nasm -f bin -o sysdata.o sysdata.asm
+dd if=sysdata.o of=sysdata1k bs=1024 conv=sync
+0+1 records in
+1+0 records out
+1024 bytes (1.0 kB) copied, 7.7244e-05 s, 13.3 MB/s
+cat sysdata1k pmswitch1k kernel > IMAGE
+gcc -I ../include -Wall -Wstrict-prototypes -march=i586 -mpc32 -fomit-frame-pointer -fno-strict-aliasing -fno-builtin -ffreestanding -nostdlib -nostdinc  -c -o shell.o shell.c
+ld -T userproc.lds -Map shell.map -o shell shell.o ../lib/lib.a

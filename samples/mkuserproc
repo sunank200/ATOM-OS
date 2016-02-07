@@ -1,0 +1,5 @@
+echo "gcc -I ../include/ -c $1.c"
+gcc -I ../include/ -c $1.c
+echo "ld -T userproc.lds -Map $1.map -o $1 $1.o ../base/lib.a"
+ld -T userproc.lds -Map $1.map -o $1 $1.o ../base/lib.a
+
